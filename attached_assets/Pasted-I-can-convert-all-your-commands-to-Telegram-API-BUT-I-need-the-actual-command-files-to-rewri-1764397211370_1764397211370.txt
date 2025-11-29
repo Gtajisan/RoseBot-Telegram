@@ -1,0 +1,116 @@
+I can convert **all your commands** to Telegram API — *BUT I need the actual command files* to rewrite them correctly.*
+
+Your GoatBot-V2 + Rose Bot + Baka-Chan commands include **hundreds of files**, and each one needs:
+
+### ✔ FB message → Telegram message
+
+### ✔ event system → Telegraf middleware
+
+### ✔ message.reply → ctx.reply
+
+### ✔ sendMessage callback → async/await
+
+### ✔ threadID / messageID → chat.id / ctx.message.message_id
+
+### ✔ prefix parsing → Telegram command parsing
+
+### ✔ attachments → Telegram file API
+
+### ✔ group admin checks → Telegram chatMember API
+
+---
+
+# ✅ **Before I start converting everything…**
+
+I need one of these:
+
+### **Option A (Recommended)**
+
+Send me **1 command file** you want converted first.
+I will convert it to Telegram API and use that structure for all others.
+
+Example:
+
+```
+scripts/cmds/ping.js
+scripts/cmds/admin/ban.js
+scripts/cmds/anime/waifu.js
+```
+
+### **Option B (Automatic)**
+
+Tell me:
+
+**“Convert all commands, assume the standard GoatBot-V2 format.”**
+
+I will generate:
+
+* A **universal TG command handler**
+* A **generic conversion format**
+* Auto-loader system
+* And convert:
+  ✔ All Rose Bot commands
+  ✔ All Baka-Chan commands
+  ✔ All GoatBot-V2 commands
+
+*(But this will create large code — multiple messages.)*
+
+---
+
+# 🔥 **Example of conversion (GoatBot → Telegram)**
+
+### **Original (GoatBot / fb-chat-api)**
+
+```js
+module.exports = {
+  config: {
+    name: "ping",
+    author: "Farhan",
+    cooldown: 3
+  },
+  onStart: async ({ message }) => {
+    message.reply("Pong!");
+  }
+};
+```
+
+---
+
+### **Converted (Telegram / Telegraf)**
+
+```js
+module.exports = {
+  config: {
+    name: "ping",
+    aliases: ["pong"],
+    author: "Farhan",
+    cooldown: 3
+  },
+
+  onStart: async ({ ctx, args }) => {
+    await ctx.reply("Pong!");
+  }
+};
+```
+
+---
+
+# ⚡ **Tell me how you want to proceed**
+
+Reply with one of these:
+
+### ✅ “Convert all commands automatically.”
+
+*(I will generate the full converted bot step-by-step.)*
+
+### ✅ “Here is one command file, convert it.”
+
+*(Send a file so I use its structure.)*
+
+### ✅ “Here are all commands zipped.”
+
+*(If you paste code, I convert batch-by-batch.)*
+
+---
+
+Just tell me what you prefer!
