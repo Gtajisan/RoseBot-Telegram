@@ -1,0 +1,9 @@
+{
+  "version": "2.0.0",
+  "build": "001",
+  "lastUpdate": "2025-01-16",
+  "changelog": {
+    "2.0.0": "GoatBot-V2 style Node.js rebuild with full feature set",
+    "1.0.0": "Initial Java release"
+  }
+}
