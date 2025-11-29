@@ -7,12 +7,12 @@ module.exports = {
   async execute(ctx, args, db, config, goat) {
     try {
       if (!args[0]) {
-        await goat.reply(ctx, '❌ Usage: /warnmode <ban|kick|mute>');
+        await goat.reply(ctx, '❌ Usage: /warnmode <ban|kick|mute>', { parse_mode: 'Markdown' });
         return;
       }
       const mode = args[0].toLowerCase();
       if (!['ban', 'kick', 'mute'].includes(mode)) {
-        await goat.reply(ctx, '❌ Invalid mode. Use: ban, kick, or mute');
+        await goat.reply(ctx, '❌ Invalid mode. Use: ban, kick, or mute', { parse_mode: 'Markdown' });
         return;
       }
       await goat.reply(ctx, `✅ Warn mode set to: ${mode}`);

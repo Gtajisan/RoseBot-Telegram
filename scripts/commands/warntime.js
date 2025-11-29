@@ -7,7 +7,7 @@ module.exports = {
   async execute(ctx, args, db, config, goat) {
     try {
       if (!args[0]) {
-        await goat.reply(ctx, '❌ Usage: /warntime <duration>\nExample: /warntime 7d');
+        await goat.reply(ctx, '❌ Usage: /warntime <duration>\nExample: /warntime 7d', { parse_mode: 'Markdown' });
         return;
       }
       const time = args[0];

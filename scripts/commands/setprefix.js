@@ -7,7 +7,7 @@ module.exports = {
   async execute(ctx, args, db, config, goat) {
     try {
       if (!args[0]) {
-        await goat.reply(ctx, '❌ Usage: /setprefix <prefix>\nExample: /setprefix !');
+        await goat.reply(ctx, '❌ Usage: /setprefix <prefix>\nExample: /setprefix !', { parse_mode: 'Markdown' });
         return;
       }
       const newPrefix = args[0];

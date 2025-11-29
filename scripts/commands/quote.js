@@ -5,6 +5,7 @@ module.exports = {
   adminOnly: false,
 
   async execute(ctx, args, db, config, goat) {
+    try {
     const quotes = [
       '"The only way to do great work is to love what you do." - Steve Jobs',
       '"Innovation distinguishes between a leader and a follower." - Steve Jobs',
@@ -14,4 +15,8 @@ module.exports = {
     const quote = quotes[Math.floor(Math.random() * quotes.length)];
     await goat.reply(ctx, `💬 ${quote}`);
   }
+
+    } catch (error) {
+      await goat.reply(ctx, `❌ Error: ${error.message}`);
+    }
 };

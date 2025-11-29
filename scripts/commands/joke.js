@@ -5,6 +5,7 @@ module.exports = {
   adminOnly: false,
 
   async execute(ctx, args, db, config, goat) {
+    try {
     const jokes = [
       'Why did the bot go to school? To improve its code! 😂',
       'What do you call a programmer from Finland? Nerdic! 🤓',
@@ -14,4 +15,8 @@ module.exports = {
     const joke = jokes[Math.floor(Math.random() * jokes.length)];
     await goat.reply(ctx, `😂 ${joke}`);
   }
+
+    } catch (error) {
+      await goat.reply(ctx, `❌ Error: ${error.message}`);
+    }
 };

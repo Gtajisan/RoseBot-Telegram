@@ -12,19 +12,19 @@ module.exports = {
 
     // Validate reply
     if (!repliedMsg) {
-      await goat.reply(ctx, '❌ Reply to an image to edit it\n\n📝 Usage: /edit <prompt>');
+      await goat.reply(ctx, '❌ Reply to an image to edit it\n\n📝 Usage: /edit <prompt>', { parse_mode: 'Markdown' });
       return;
     }
 
     // Check if reply is image
     if (!repliedMsg.photo) {
-      await goat.reply(ctx, '❌ Reply to an image');
+      await goat.reply(ctx, '❌ Reply to an image', { parse_mode: 'Markdown' });
       return;
     }
 
     // Check if prompt provided
     if (!prompt) {
-      await goat.reply(ctx, '❌ Provide a prompt\n\n📝 Usage: /edit <prompt>');
+      await goat.reply(ctx, '❌ Provide a prompt\n\n📝 Usage: /edit <prompt>', { parse_mode: 'Markdown' });
       return;
     }
 
@@ -34,7 +34,7 @@ module.exports = {
       const fileLink = await goat.getInstance().telegram.getFileLink(photoId);
       
       // Show processing status
-      await goat.reply(ctx, '⏳ Processing image with Nano-Banana AI...');
+      await goat.reply(ctx, '⏳ Processing image with Nano-Banana AI...', { parse_mode: 'Markdown' });
 
       // Call Nano-Banana API
       const response = await axios.get(
@@ -43,7 +43,7 @@ module.exports = {
       );
 
       if (!response.data.imageUrl) {
-        await goat.reply(ctx, '❌ Failed to process image');
+        await goat.reply(ctx, '❌ Failed to process image', { parse_mode: 'Markdown' });
         return;
       }
 

@@ -7,7 +7,7 @@ module.exports = {
   async execute(ctx, args, db, config, goat) {
     try {
       if (!ctx.message.reply_to_message) {
-        await goat.reply(ctx, '❌ Reply to a message to warn user');
+        await goat.reply(ctx, '❌ Reply to a message to warn user', { parse_mode: 'Markdown' });
         return;
       }
       const userId = ctx.message.reply_to_message.from.id;

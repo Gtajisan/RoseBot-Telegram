@@ -36,7 +36,7 @@ module.exports = {
       }
       
       // Basic command response
-      await goat.reply(ctx, `✅ Command '${ctx.payload.command}' executed
+      await goat.reply(ctx, `✅ Command '${ctx.message?.text?.split(' ')[0]?.slice(1) || 'command'}' executed
 💡 This is an auto-converted Goatbot command
 🔧 Developer may need to refine functionality`);
       

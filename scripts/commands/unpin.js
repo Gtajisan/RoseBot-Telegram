@@ -5,6 +5,11 @@ module.exports = {
   adminOnly: true,
 
   async execute(ctx, args, db, config, goat) {
-    await goat.reply(ctx, '📌 Message unpinned');
+    try {
+    await goat.reply(ctx, '📌 Message unpinned', { parse_mode: 'Markdown' });
   }
+
+    } catch (error) {
+      await goat.reply(ctx, `❌ Error: ${error.message}`);
+    }
 };

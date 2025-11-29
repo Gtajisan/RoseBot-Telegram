@@ -7,7 +7,7 @@ module.exports = {
   async execute(ctx, args, db, config, goat) {
     try {
       if (!args[0]) {
-        await goat.reply(ctx, '❌ Usage: /allowlist <url>');
+        await goat.reply(ctx, '❌ Usage: /allowlist <url>', { parse_mode: 'Markdown' });
         return;
       }
       const url = args[0];

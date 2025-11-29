@@ -1,0 +1,166 @@
+/note
+❌ Error: 400: Bad Request: can't parse entities: Unsupported start tag "name" at byte offset 17
+/translate
+❌ Error: 400: Bad Request: can't parse entities: Unsupported start tag "lang" at byte offset 22
+/whois
+👤 User Info
+
+ID: 5836861332
+Name: FRN = ?
+Username: @FARHAN_MUH_TASIM
+/afk
+💤 FRN = ? is now AFK
+Reason: AFK
+/calc
+❌ Error: 400: Bad Request: can't parse entities: Unsupported start tag "math" at byte offset 17
+/meme
+😂 0 days without (Lenny, Simpsons)
+/manga
+❌ Error: 400: Bad Request: can't parse entities: Unsupported start tag "name" at byte offset 18
+/start
+🌹 Welcome FRN = ?!
+
+I'm Rose Bot - Professional Telegram bot with:
+✅ Modular commands
+✅ Admin management
+✅ Statistics tracking
+✅ Anti-spam protection
+
+Use /help to explore!
+/help
+📖 Commands
+
+/adminlist - List all admins
+/afk - Set AFK status
+/alldl - No description
+/anime - Get anime info
+/antichangeinfobox - No description
+/appstore - No description
+/avatar - No description
+/balance - No description
+/busy - No description
+/calc - Calculator
+/callad - No description
+/chatinfo - Get chat info
+/count - No description
+/customrankcard - No description
+/daily - No description
+/demo - No description
+/dhbc - No description
+/edit - Edit images using Nano-Banana AI
+/emojimean - No description
+/emojimix - No description
+/fact - Random fact
+/file - No description
+/filters - List all filters
+/fork - No description
+/gpt - No description
+/grouptag - No description
+/guessnumber - No description
+/help - Show all commands
+/hubble - No description
+/hug - Give hug
+/id - Get ID
+/imgbb - Upload image(s) to imgbb
+/info - Bot information
+/joke - Tell a joke
+/kickme - Kick yourself
+/kiss - Send kiss
+/locks - Show locked items
+/logo - Generate text logo
+/manga - Get manga info
+/meme - Get random meme image
+/menu - Show command menu
+/moon - No description
+/commandName - No description
+/nijix - Anime-style image generation with style, preset, and aspect ratio support.
+/note - Save note
+/notes - Show all notes
+/numlookup - No description
+/owner - Show bot owner
+/pfp - No description
+/pi - Chat with Pi AI using text or voice. Supports model selection and voice toggling.
+/ping - Check latency
+/prefix - Thay đổi dấu lệnh của bot trong box chat của bạn hoặc cả hệ thống bot (chỉ admin bot)
+/quote - Get random quote
+/rank - No description
+/rankup - No description
+/refresh - No description
+/rules - No description
+/savetext - No description
+/say - bot will make your text into voice.
+/sendnoti - No description
+/setalias - No description
+/setlang - No description
+/setleave - No description
+/setname - No description
+/setrankup - No description
+/ship - Ship two people
+/shortcut - No description
+/sing - No description
+/slap - Slap someone
+/sorthelp - No description
+/start - Welcome message
+/texttoimage - No description
+/thread - No description
+/tid - No description
+/translate - Translate text
+/uid - No description
+/unsend - No description
+/uptime - Show bot uptime
+/vip - No description
+/waifu - Get random waifu image
+/weather - No description
+/whois - Get user info
+/ytb - No description
+/anime
+❌ Error: 400: Bad Request: can't parse entities: Unsupported start tag "name" at byte offset 18
+/sing
+❌ Error: Cannot read properties of undefined (reading 'command')
+/ytb
+❌ Error: Cannot read properties of undefined (reading 'command')
+/pfp
+❌ Error: Cannot read properties of undefined (reading 'command')
+/edit
+❌ Error: 400: Bad Request: can't parse entities: Unsupported start tag "prompt" at byte offset 52
+/refresh
+❌ Error: Cannot read properties of undefined (reading 'command')
+/whois
+👤 User Info
+
+ID: 5836861332
+Name: FRN = ?
+Username: @FARHAN_MUH_TASIM
+/say
+❌ Error: Cannot read properties of undefined (reading 'command')
+/imgbb
+❌ Error: Cannot read properties of undefined (reading 'command')
+/owner
+👤 Owner: YOUR_USER_ID_HERE
+/rules
+❌ Error: Cannot read properties of undefined (reading 'command')
+/daily
+❌ Error: Cannot read properties of undefined (reading 'command')
+/note
+❌ Error: 400: Bad Request: can't parse entities: Unsupported start tag "name" at byte offset 17
+/owner
+👤 Owner: YOUR_USER_ID_HERE
+/weather
+❌ Error: Cannot read properties of undefined (reading 'command')
+/info
+🌹 Rose Bot
+📌 v2.0.0 (Build 001)
+✨ Telegram Edition
+/nijix
+❌ Error: Cannot read properties of undefined (reading 'command')
+/ship
+❌ Error: 400: Bad Request: can't parse entities: Unsupported start tag "name1" at byte offset 17
+/moon
+❌ Error: Cannot read properties of undefined (reading 'command')
+/afk
+💤 FRN = ? is now AFK
+Reason: AFK
+/help
+📖 Commands
+
+(Loading commands...)

@@ -5,7 +5,12 @@ module.exports = {
   adminOnly: false,
 
   async execute(ctx, args, db, config, goat) {
+    try {
     const ownerId = config.configCommands?.owners?.[0] || 'Unknown';
-    await goat.reply(ctx, `👤 Owner: <b>${ownerId}</b>`);
+    await goat.reply(ctx, `👤 Owner: *${ownerId}*`);
   }
+
+    } catch (error) {
+      await goat.reply(ctx, `❌ Error: ${error.message}`);
+    }
 };

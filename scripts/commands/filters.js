@@ -5,7 +5,12 @@ module.exports = {
   adminOnly: false,
 
   async execute(ctx, args, db, config, goat) {
-    const msg = `<b>🔍 Active Filters</b>\n\nNo filters active yet.\n\nUse /filter to add`;
+    try {
+    const msg = `*🔍 Active Filters*\n\nNo filters active yet.\n\nUse /filter to add`;
     await goat.reply(ctx, msg);
   }
+
+    } catch (error) {
+      await goat.reply(ctx, `❌ Error: ${error.message}`);
+    }
 };

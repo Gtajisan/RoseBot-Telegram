@@ -7,7 +7,7 @@ module.exports = {
   async execute(ctx, args, db, config, goat) {
     try {
       if (!args[0] || !args[1]) {
-        await goat.reply(ctx, '❌ Usage: /tempban <user_id> <time>\nExample: /tempban 123456 24h');
+        await goat.reply(ctx, '❌ Usage: /tempban <user_id> <time>\nExample: /tempban 123456 24h', { parse_mode: 'Markdown' });
         return;
       }
       const userId = parseInt(args[0]);
