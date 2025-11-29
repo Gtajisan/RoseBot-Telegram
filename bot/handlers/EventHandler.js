@@ -10,16 +10,21 @@ class EventHandler {
   }
 
   load(eventsDir) {
-    if (!fs.existsSync(eventsDir)) {
-      this.logger.warn(`Events directory not found: ${eventsDir}`);
+    // Resolve to absolute path
+    const absoluteDir = path.isAbsolute(eventsDir) 
+      ? eventsDir 
+      : path.resolve(__dirname, '../../', eventsDir);
+    
+    if (!fs.existsSync(absoluteDir)) {
+      this.logger.warn(`Events directory not found: ${absoluteDir}`);
       return;
     }
 
-    const files = fs.readdirSync(eventsDir).filter(f => f.endsWith('.js'));
+    const files = fs.readdirSync(absoluteDir).filter(f => f.endsWith('.js'));
 
     for (const file of files) {
       try {
-        const filePath = path.join(eventsDir, file);
+        const filePath = path.join(absoluteDir, file);
         delete require.cache[require.resolve(filePath)];
         const evt = require(filePath);
 

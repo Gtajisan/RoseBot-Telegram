@@ -19,9 +19,9 @@ function createDashboard(db, commandHandler, logger) {
   });
 
   // API: Statistics
-  app.get('/api/stats', (req, res) => {
+  app.get('/api/stats', async (req, res) => {
     try {
-      const stats = db.getStats();
+      const stats = await db.getStats();
       res.json({
         status: 'online',
         bot: 'Rose Bot v2.0.0',
@@ -53,9 +53,9 @@ function createDashboard(db, commandHandler, logger) {
   });
 
   // API: Connected Groups
-  app.get('/api/groups', (req, res) => {
+  app.get('/api/groups', async (req, res) => {
     try {
-      const groups = db.db.prepare('SELECT * FROM chats ORDER BY created_at DESC LIMIT 50').all();
+      const groups = await db.all('SELECT * FROM chats ORDER BY created_at DESC LIMIT 50');
       res.json({ groups: groups || [], count: groups?.length || 0 });
     } catch (error) {
       res.status(500).json({ error: error.message, groups: [] });
@@ -63,9 +63,9 @@ function createDashboard(db, commandHandler, logger) {
   });
 
   // API: Users
-  app.get('/api/users', (req, res) => {
+  app.get('/api/users', async (req, res) => {
     try {
-      const users = db.db.prepare('SELECT user_id, username, first_name, is_admin, warnings FROM users ORDER BY created_at DESC LIMIT 50').all();
+      const users = await db.all('SELECT user_id, username, first_name, is_admin, warnings FROM users ORDER BY created_at DESC LIMIT 50');
       res.json({ users: users || [], count: users?.length || 0 });
     } catch (error) {
       res.status(500).json({ error: error.message, users: [] });
@@ -73,15 +73,15 @@ function createDashboard(db, commandHandler, logger) {
   });
 
   // API: Command Usage
-  app.get('/api/usage', (req, res) => {
+  app.get('/api/usage', async (req, res) => {
     try {
-      const usage = db.db.prepare(`
+      const usage = await db.all(`
         SELECT command, COUNT(*) as count 
         FROM command_usage 
         GROUP BY command 
         ORDER BY count DESC 
         LIMIT 20
-      `).all();
+      `);
       res.json({ usage: usage || [] });
     } catch (error) {
       res.status(500).json({ error: error.message, usage: [] });
@@ -89,15 +89,15 @@ function createDashboard(db, commandHandler, logger) {
   });
 
   // API: Warnings
-  app.get('/api/warnings', (req, res) => {
+  app.get('/api/warnings', async (req, res) => {
     try {
-      const warnings = db.db.prepare(`
+      const warnings = await db.all(`
         SELECT user_id, COUNT(*) as count 
         FROM warnings 
         GROUP BY user_id 
         ORDER BY count DESC 
         LIMIT 20
-      `).all();
+      `);
       res.json({ warnings: warnings || [] });
     } catch (error) {
       res.status(500).json({ error: error.message, warnings: [] });

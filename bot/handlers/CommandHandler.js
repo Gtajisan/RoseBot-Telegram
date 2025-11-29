@@ -10,16 +10,21 @@ class CommandHandler {
   }
 
   load(commandsDir) {
-    if (!fs.existsSync(commandsDir)) {
-      this.logger.warn(`Commands directory not found: ${commandsDir}`);
+    // Resolve to absolute path
+    const absoluteDir = path.isAbsolute(commandsDir) 
+      ? commandsDir 
+      : path.resolve(__dirname, '../../', commandsDir);
+    
+    if (!fs.existsSync(absoluteDir)) {
+      this.logger.warn(`Commands directory not found: ${absoluteDir}`);
       return;
     }
 
-    const files = fs.readdirSync(commandsDir).filter(f => f.endsWith('.js'));
+    const files = fs.readdirSync(absoluteDir).filter(f => f.endsWith('.js'));
 
     for (const file of files) {
       try {
-        const filePath = path.join(commandsDir, file);
+        const filePath = path.join(absoluteDir, file);
         delete require.cache[require.resolve(filePath)];
         const cmd = require(filePath);
 
@@ -53,7 +58,7 @@ class CommandHandler {
 
     const userId = ctx.from?.id;
     const isOwner = this.config.configCommands?.owners?.includes(userId);
-    const user = this.db.getUser(userId);
+    const user = await this.db.getUser(userId);
 
     if (cmd.adminOnly && !isOwner && !user?.is_admin) {
       await goat.reply(ctx, '❌ Admin only');
@@ -68,7 +73,7 @@ class CommandHandler {
 
     try {
       await cmd.execute(ctx, args, this.db, this.config, goat);
-      this.db.addCommandUsage(userId, commandName);
+      await this.db.addCommandUsage(userId, commandName);
       return true;
     } catch (error) {
       this.logger.error(`Command error (${commandName}):`, error.message);

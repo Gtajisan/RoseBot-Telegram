@@ -1,0 +1,50 @@
+2025-11-29T07:23:46.320758588Z - /opt/render/project/src/index.js 
+2025-11-29T07:23:46.32086598Z ❌ [2025-11-29T07:23:46.320Z] [ERROR] Failed to load command users.js: Cannot find module 'scripts/commands/users.js'
+2025-11-29T07:23:46.3208708Z Require stack:
+2025-11-29T07:23:46.3208728Z - /opt/render/project/src/bot/handlers/CommandHandler.js
+2025-11-29T07:23:46.32087497Z - /opt/render/project/src/index.js 
+2025-11-29T07:23:46.320977353Z ❌ [2025-11-29T07:23:46.320Z] [ERROR] Failed to load command waifu.js: Cannot find module 'scripts/commands/waifu.js'
+2025-11-29T07:23:46.320982063Z Require stack:
+2025-11-29T07:23:46.320984543Z - /opt/render/project/src/bot/handlers/CommandHandler.js
+2025-11-29T07:23:46.320986233Z - /opt/render/project/src/index.js 
+2025-11-29T07:23:46.321122505Z ❌ [2025-11-29T07:23:46.321Z] [ERROR] Failed to load command warn.js: Cannot find module 'scripts/commands/warn.js'
+2025-11-29T07:23:46.321129706Z Require stack:
+2025-11-29T07:23:46.321132126Z - /opt/render/project/src/bot/handlers/CommandHandler.js
+2025-11-29T07:23:46.321133846Z - /opt/render/project/src/index.js 
+2025-11-29T07:23:46.321234408Z ❌ [2025-11-29T07:23:46.321Z] [ERROR] Failed to load command warnlimit.js: Cannot find module 'scripts/commands/warnlimit.js'
+2025-11-29T07:23:46.321236978Z Require stack:
+2025-11-29T07:23:46.321238798Z - /opt/render/project/src/bot/handlers/CommandHandler.js
+2025-11-29T07:23:46.321240428Z - /opt/render/project/src/index.js 
+2025-11-29T07:23:46.321371861Z ❌ [2025-11-29T07:23:46.321Z] [ERROR] Failed to load command warnmode.js: Cannot find module 'scripts/commands/warnmode.js'
+2025-11-29T07:23:46.321375671Z Require stack:
+2025-11-29T07:23:46.321378471Z - /opt/render/project/src/bot/handlers/CommandHandler.js
+2025-11-29T07:23:46.321381241Z - /opt/render/project/src/index.js 
+2025-11-29T07:23:46.321491063Z ❌ [2025-11-29T07:23:46.321Z] [ERROR] Failed to load command warns.js: Cannot find module 'scripts/commands/warns.js'
+2025-11-29T07:23:46.321494783Z Require stack:
+2025-11-29T07:23:46.321497704Z - /opt/render/project/src/bot/handlers/CommandHandler.js
+2025-11-29T07:23:46.321501144Z - /opt/render/project/src/index.js 
+2025-11-29T07:23:46.321624726Z ❌ [2025-11-29T07:23:46.321Z] [ERROR] Failed to load command warntime.js: Cannot find module 'scripts/commands/warntime.js'
+2025-11-29T07:23:46.321630686Z Require stack:
+2025-11-29T07:23:46.321634226Z - /opt/render/project/src/bot/handlers/CommandHandler.js
+2025-11-29T07:23:46.321636996Z - /opt/render/project/src/index.js 
+2025-11-29T07:23:46.321743879Z ❌ [2025-11-29T07:23:46.321Z] [ERROR] Failed to load command welcome.js: Cannot find module 'scripts/commands/welcome.js'
+2025-11-29T07:23:46.321747829Z Require stack:
+2025-11-29T07:23:46.321750739Z - /opt/render/project/src/bot/handlers/CommandHandler.js
+2025-11-29T07:23:46.321753609Z - /opt/render/project/src/index.js 
+2025-11-29T07:23:46.321863741Z ❌ [2025-11-29T07:23:46.321Z] [ERROR] Failed to load command whois.js: Cannot find module 'scripts/commands/whois.js'
+2025-11-29T07:23:46.321867951Z Require stack:
+2025-11-29T07:23:46.321869931Z - /opt/render/project/src/bot/handlers/CommandHandler.js
+2025-11-29T07:23:46.321871631Z - /opt/render/project/src/index.js 
+2025-11-29T07:23:46.321876861Z ℹ️ [2025-11-29T07:23:46.321Z] [INFO] 📋 Total commands loaded: 0 
+2025-11-29T07:23:46.32229729Z ❌ [2025-11-29T07:23:46.322Z] [ERROR] Failed to load event group_join.js: Cannot find module 'scripts/events/group_join.js'
+2025-11-29T07:23:46.32230528Z Require stack:
+2025-11-29T07:23:46.32230791Z - /opt/render/project/src/bot/handlers/EventHandler.js
+2025-11-29T07:23:46.32230967Z - /opt/render/project/src/index.js
+2025-11-29T07:23:46.322441663Z ❌ [2025-11-29T07:23:46.322Z] [ERROR] Failed to load event message.js: Cannot find module 'scripts/events/message.js'
+2025-11-29T07:23:46.322447933Z Require stack:
+2025-11-29T07:23:46.322450824Z - /opt/render/project/src/bot/handlers/EventHandler.js
+2025-11-29T07:23:46.322453753Z - /opt/render/project/src/index.js
+2025-11-29T07:23:46.322468604Z ℹ️ [2025-11-29T07:23:46.322Z] [INFO] 📡 Total events: 0 
+2025-11-29T07:23:46.326778204Z ℹ️ [2025-11-29T07:23:46.326Z] [INFO] 📊 Dashboard API on port 3000 
+2025-11-29T07:23:47.002157273Z ❌ [2025-11-29T07:23:47.001Z] [ERROR] Bot launch error: 404: Not Found
+2025-11-29T07:23:47.00249336Z ❌ [2025-11-29T07:23:47.002Z] [ERROR] Startup error: 404: Not Found
