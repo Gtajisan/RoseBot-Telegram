@@ -25,6 +25,17 @@ const configCommands = JSON.parse(fs.readFileSync('./configCommands.json', 'utf8
 const versions = JSON.parse(fs.readFileSync('./versions.json', 'utf8'));
 config.configCommands = configCommands;
 
+// Get token from environment variable (for Render/Replit deployment) or config
+const token = process.env.TELEGRAM_BOT_TOKEN || config.telegram.token;
+
+if (!token || token === 'YOUR_BOT_TOKEN_HERE') {
+  console.error('❌ ERROR: TELEGRAM_BOT_TOKEN not set!');
+  console.error('Please set the TELEGRAM_BOT_TOKEN environment variable.');
+  process.exit(1);
+}
+
+config.telegram.token = token;
+
 // Initialize
 const logger = new Logger(config.logging);
 const db = new DB(config.database.path);
