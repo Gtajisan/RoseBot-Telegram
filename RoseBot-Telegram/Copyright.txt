@@ -1,6 +1,0 @@
-Rose Bot - Telegram Edition
-Copyright (c) 2025 Rose Bot Team
-
-Licensed under the MIT License.
-
-This bot is inspired by and built on the GoatBot-V2 architecture pattern.
