@@ -12,6 +12,8 @@ module.exports = {
     const name1 = args[0];
     const name2 = args[1];
     const percent = Math.floor(Math.random() * 100) + 1;
-    await goat.reply(ctx, `💕 ${name1} + ${name2}\nShip level: ${percent}%`);
+    const bar = '█'.repeat(Math.floor(percent / 10)) + '░'.repeat(10 - Math.floor(percent / 10));
+    const msg = `💕 *Ship Compatibility*\n\n${name1} + ${name2}\n\n${bar} ${percent}%`;
+    await goat.reply(ctx, msg, { parse_mode: 'Markdown' });
   }
 };

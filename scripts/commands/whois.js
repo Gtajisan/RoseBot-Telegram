@@ -5,7 +5,6 @@ module.exports = {
   adminOnly: false,
 
   async execute(ctx, args, db, config, goat) {
-    // Delegate to userinfo command
     const userInfoCmd = require('./userinfo.js');
     await userInfoCmd.execute(ctx, args, db, config, goat);
   }

@@ -6,7 +6,7 @@ module.exports = {
 
   async execute(ctx, args, db, config, goat) {
     try {
-      await goat.reply(ctx, '✅ All filters removed');
+      await goat.reply(ctx, '✅ All filters removed', { parse_mode: 'Markdown' });
     } catch (error) {
       await goat.reply(ctx, `❌ Error: ${error.message}`);
     }

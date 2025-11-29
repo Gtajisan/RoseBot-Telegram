@@ -8,7 +8,7 @@ module.exports = {
 
   async execute(ctx, args, db, config, goat) {
     try {
-      const loading = await goat.reply(ctx, '⏳ Finding meme...');
+      const loading = await goat.reply(ctx, '⏳ Finding meme...', { parse_mode: 'Markdown' });
       
       const response = await axios.get('https://api.imgflip.com/get_memes');
       if (response.data?.data?.memes && response.data.data.memes.length > 0) {
@@ -16,10 +16,10 @@ module.exports = {
         await ctx.replyWithPhoto(randomMeme.url, { caption: `😂 ${randomMeme.name}` });
         try { await goat.deleteMessage(ctx.chat.id, loading.message_id); } catch (e) {}
       } else {
-        await goat.reply(ctx, '❌ Could not fetch meme');
+        await goat.reply(ctx, '❌ Could not fetch meme', { parse_mode: 'Markdown' });
       }
     } catch (error) {
-      await goat.reply(ctx, '❌ Error fetching meme');
+      await goat.reply(ctx, '❌ Error fetching meme', { parse_mode: 'Markdown' });
     }
   }
 };

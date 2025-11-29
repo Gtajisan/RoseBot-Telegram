@@ -9,11 +9,11 @@ module.exports = {
   async execute(ctx, args, db, config, goat) {
     try {
       if (!args[0]) {
-        await goat.reply(ctx, '❌ Usage: /logo <text>');
+        await goat.reply(ctx, '❌ Usage: /logo <text>', { parse_mode: 'Markdown' });
         return;
       }
       const text = args.join(' ');
-      const loading = await goat.reply(ctx, '⏳ Generating logo...');
+      const loading = await goat.reply(ctx, '⏳ Generating logo...', { parse_mode: 'Markdown' });
       
       // Simple text-to-image API
       const encoded = encodeURIComponent(text);

@@ -11,6 +11,7 @@ module.exports = {
     }
     const lang = args[0];
     const text = args.slice(1).join(' ');
-    await goat.reply(ctx, `🌐 Translation to ${lang}:\n${text}\n\n(Translation service loading...)`);
+    const msg = `🌐 *Translation to ${lang}*\n\n\`${text}\`\n\n⏳ Translation service: Coming soon`;
+    await goat.reply(ctx, msg, { parse_mode: 'Markdown' });
   }
 };

@@ -5,7 +5,12 @@ module.exports = {
   adminOnly: false,
 
   async execute(ctx, args, db, config, goat) {
-    const msg = `<b>🔒 Locked items</b>\n\nCurrently locked:\n• None\n\nUse /lock to add restrictions`;
+    try {
+    const msg = `*🔒 Locked items*\n\nCurrently locked:\n• None\n\nUse /lock to add restrictions`;
     await goat.reply(ctx, msg);
   }
+
+    } catch (error) {
+      await goat.reply(ctx, `❌ Error: ${error.message}`);
+    }
 };
