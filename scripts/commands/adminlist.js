@@ -1,6 +1,7 @@
 module.exports = {
   name: 'adminlist',
   description: 'List all admins',
+  author: 'Gtajisan',
   adminOnly: false,
 
   async execute(ctx, args, db, config, goat) {

@@ -1,6 +1,7 @@
 module.exports = {
   name: 'admin',
   description: 'Admin panel',
+  author: 'Gtajisan',
   adminOnly: true,
 
   async execute(ctx, args, db, config, goat) {

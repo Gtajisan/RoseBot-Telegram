@@ -1,6 +1,7 @@
 module.exports = {
   name: 'pin',
   description: 'Pin message',
+  author: 'Gtajisan',
   adminOnly: true,
 
   async execute(ctx, args, db, config, goat) {

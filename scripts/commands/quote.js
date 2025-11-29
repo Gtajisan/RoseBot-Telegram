@@ -1,6 +1,7 @@
 module.exports = {
   name: 'quote',
   description: 'Get random quote',
+  author: 'Gtajisan',
   adminOnly: false,
 
   async execute(ctx, args, db, config, goat) {

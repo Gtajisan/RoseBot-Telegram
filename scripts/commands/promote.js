@@ -1,6 +1,7 @@
 module.exports = {
   name: 'promote',
   description: 'Promote user to admin',
+  author: 'Gtajisan',
   adminOnly: true,
 
   async execute(ctx, args, db, config, goat) {

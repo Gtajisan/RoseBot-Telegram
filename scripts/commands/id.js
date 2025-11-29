@@ -1,6 +1,7 @@
 module.exports = {
   name: 'id',
   description: 'Get ID',
+  author: 'Gtajisan',
   adminOnly: false,
 
   async execute(ctx, args, db, config, goat) {

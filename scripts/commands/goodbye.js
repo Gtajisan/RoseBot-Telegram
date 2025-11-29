@@ -1,6 +1,7 @@
 module.exports = {
   name: 'goodbye',
   description: 'Toggle goodbye messages',
+  author: 'Gtajisan',
   adminOnly: true,
 
   async execute(ctx, args, db, config, goat) {

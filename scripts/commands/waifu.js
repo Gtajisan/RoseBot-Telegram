@@ -3,6 +3,7 @@ const axios = require('axios');
 module.exports = {
   name: 'waifu',
   description: 'Get random waifu image',
+  author: 'Gtajisan',
   adminOnly: false,
 
   async execute(ctx, args, db, config, goat) {

@@ -1,6 +1,7 @@
 module.exports = {
   name: 'notes',
   description: 'Show all notes',
+  author: 'Gtajisan',
   adminOnly: false,
 
   async execute(ctx, args, db, config, goat) {

@@ -3,6 +3,7 @@ const axios = require('axios');
 module.exports = {
   name: 'logo',
   description: 'Generate text logo',
+  author: 'Gtajisan',
   adminOnly: false,
 
   async execute(ctx, args, db, config, goat) {

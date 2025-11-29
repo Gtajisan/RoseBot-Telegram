@@ -1,6 +1,7 @@
 module.exports = {
   name: 'setprefix',
   description: 'Set command prefix',
+  author: 'Gtajisan',
   adminOnly: true,
 
   async execute(ctx, args, db, config, goat) {

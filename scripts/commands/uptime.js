@@ -1,6 +1,7 @@
 module.exports = {
   name: 'uptime',
   description: 'Show bot uptime',
+  author: 'Gtajisan',
   adminOnly: false,
 
   async execute(ctx, args, db, config, goat) {

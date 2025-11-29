@@ -1,6 +1,7 @@
 module.exports = {
   name: 'warntime',
   description: 'Set warn expire time',
+  author: 'Gtajisan',
   adminOnly: true,
 
   async execute(ctx, args, db, config, goat) {

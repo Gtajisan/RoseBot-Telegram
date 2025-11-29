@@ -1,6 +1,7 @@
 module.exports = {
   name: 'anime',
   description: 'Get anime info',
+  author: 'Gtajisan',
   adminOnly: false,
 
   async execute(ctx, args, db, config, goat) {

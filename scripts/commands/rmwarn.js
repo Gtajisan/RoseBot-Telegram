@@ -1,6 +1,7 @@
 module.exports = {
   name: 'rmwarn',
   description: 'Remove one warn',
+  author: 'Gtajisan',
   adminOnly: true,
 
   async execute(ctx, args, db, config, goat) {

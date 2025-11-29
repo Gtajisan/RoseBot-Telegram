@@ -1,6 +1,7 @@
 module.exports = {
   name: 'filter',
   description: 'Add auto-reply filter',
+  author: 'Gtajisan',
   adminOnly: true,
 
   async execute(ctx, args, db, config, goat) {

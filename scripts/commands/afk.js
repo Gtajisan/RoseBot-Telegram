@@ -1,6 +1,7 @@
 module.exports = {
   name: 'afk',
   description: 'Set AFK status',
+  author: 'Gtajisan',
   adminOnly: false,
 
   async execute(ctx, args, db, config, goat) {

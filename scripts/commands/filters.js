@@ -1,6 +1,7 @@
 module.exports = {
   name: 'filters',
   description: 'List all filters',
+  author: 'Gtajisan',
   adminOnly: false,
 
   async execute(ctx, args, db, config, goat) {
