@@ -52,23 +52,54 @@ function createDashboard(db, commandHandler, logger) {
     }
   });
 
-  // API: Connected Groups
+  // API: Connected Groups (All Chats)
   app.get('/api/groups', async (req, res) => {
     try {
-      const groups = await db.all('SELECT * FROM chats ORDER BY created_at DESC LIMIT 50');
-      res.json({ groups: groups || [], count: groups?.length || 0 });
+      // Get all chats with activity count
+      const groups = await db.all(`
+        SELECT 
+          c.chat_id, 
+          c.title, 
+          c.type, 
+          c.created_at,
+          COUNT(DISTINCT cu.id) as commands_count,
+          COUNT(DISTINCT w.id) as warnings_count
+        FROM chats c
+        LEFT JOIN command_usage cu ON c.chat_id = cu.chat_id
+        LEFT JOIN warnings w ON c.chat_id = w.chat_id
+        GROUP BY c.chat_id
+        ORDER BY c.created_at DESC
+      `);
+      res.json({ 
+        groups: groups || [], 
+        count: groups?.length || 0,
+        timestamp: new Date().toISOString()
+      });
     } catch (error) {
-      res.status(500).json({ error: error.message, groups: [] });
+      res.status(500).json({ error: error.message, groups: [], count: 0 });
     }
   });
 
-  // API: Users
+  // API: Users with Activity
   app.get('/api/users', async (req, res) => {
     try {
-      const users = await db.all('SELECT user_id, username, first_name, is_admin, warnings FROM users ORDER BY created_at DESC LIMIT 50');
+      const users = await db.all(`
+        SELECT 
+          u.user_id, 
+          u.username, 
+          u.first_name, 
+          u.is_admin, 
+          u.warnings,
+          COUNT(DISTINCT cu.id) as commands_count,
+          MAX(cu.timestamp) as last_activity
+        FROM users u
+        LEFT JOIN command_usage cu ON u.user_id = cu.user_id
+        GROUP BY u.user_id
+        ORDER BY u.created_at DESC
+      `);
       res.json({ users: users || [], count: users?.length || 0 });
     } catch (error) {
-      res.status(500).json({ error: error.message, users: [] });
+      res.status(500).json({ error: error.message, users: [], count: 0 });
     }
   });
 

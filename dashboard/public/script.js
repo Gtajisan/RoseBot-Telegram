@@ -104,28 +104,31 @@ async function loadGroups() {
       <table>
         <thead>
           <tr>
-            <th>Chat ID</th>
-            <th>Title</th>
+            <th>Chat Name</th>
             <th>Type</th>
-            <th>Prefix</th>
+            <th>Commands</th>
+            <th>Warnings</th>
             <th>Joined</th>
           </tr>
         </thead>
         <tbody>
-          ${data.groups.map(group => `
+          ${data.groups.map(group => {
+            const typeEmoji = group.type === 'group' ? '👥' : (group.type === 'supergroup' ? '👥👥' : '💬');
+            return `
             <tr>
-              <td><code>${group.chat_id}</code></td>
-              <td>${group.title || 'Private'}</td>
+              <td>${typeEmoji} ${group.title || 'Private Chat'}</td>
               <td>${group.type || 'N/A'}</td>
-              <td><strong>${group.prefix || '/'}</strong></td>
+              <td>${group.commands_count || 0}</td>
+              <td>${group.warnings_count || 0}</td>
               <td>${new Date(group.created_at).toLocaleDateString()}</td>
             </tr>
-          `).join('')}
+          `}).join('')}
         </tbody>
       </table>
     `;
     
     groupsList.innerHTML = table;
+    document.getElementById('groupsCount').textContent = data.count || 0;
   } catch (error) {
     console.error('Error loading groups:', error);
     document.getElementById('groupsList').innerHTML = '<p>Error loading groups</p>';

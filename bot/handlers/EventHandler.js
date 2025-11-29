@@ -45,7 +45,8 @@ class EventHandler {
     if (!evt) return;
 
     try {
-      await evt.execute(...args, this.db, this.config);
+      // Pass logger as well so events can log
+      await evt.execute(...args, this.db, this.config, this.logger);
     } catch (error) {
       this.logger.error(`Event error (${eventName}):`, error.message);
     }
