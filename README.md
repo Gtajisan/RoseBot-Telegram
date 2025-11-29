@@ -2,6 +2,10 @@
 
 Professional modular Telegram bot built with GoatBot-V2 architecture in Node.js.
 
+**👨‍💻 Developer:** Gtajisan  
+**📧 Email:** ffjisan804@gmail.com  
+**📝 Based on:** GoatBot-V2, Rose Bot, Baka-Chan-v1
+
 ## 🚀 Quick Start
 
 ### 1. Get Bot Token

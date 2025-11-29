@@ -1,6 +1,7 @@
 module.exports = {
   name: 'lock',
   description: 'Lock message types',
+  author: 'Gtajisan',
   adminOnly: true,
 
   async execute(ctx, args, db, config, goat) {

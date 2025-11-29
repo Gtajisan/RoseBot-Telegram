@@ -1,6 +1,7 @@
 module.exports = {
   name: 'owner',
   description: 'Show bot owner',
+  author: 'Gtajisan',
   adminOnly: false,
 
   async execute(ctx, args, db, config, goat) {

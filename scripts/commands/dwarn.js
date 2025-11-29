@@ -1,6 +1,7 @@
 module.exports = {
   name: 'dwarn',
   description: 'Warn and delete message',
+  author: 'Gtajisan',
   adminOnly: true,
 
   async execute(ctx, args, db, config, goat) {

@@ -1,6 +1,7 @@
 module.exports = {
   name: 'whois',
   description: 'Get user info',
+  author: 'Gtajisan',
   adminOnly: false,
 
   async execute(ctx, args, db, config, goat) {

@@ -1,6 +1,7 @@
 module.exports = {
   name: 'setgoodbye',
   description: 'Set custom goodbye message',
+  author: 'Gtajisan',
   adminOnly: true,
 
   async execute(ctx, args, db, config, goat) {

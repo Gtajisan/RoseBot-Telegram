@@ -1,6 +1,7 @@
 module.exports = {
   name: 'ship',
   description: 'Ship two people',
+  author: 'Gtajisan',
   adminOnly: false,
 
   async execute(ctx, args, db, config, goat) {

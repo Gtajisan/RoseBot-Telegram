@@ -1,6 +1,7 @@
 module.exports = {
   name: 'stats',
   description: 'Bot statistics',
+  author: 'Gtajisan',
   adminOnly: true,
 
   async execute(ctx, args, db, config, goat) {

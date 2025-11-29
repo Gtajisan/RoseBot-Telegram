@@ -1,6 +1,7 @@
 module.exports = {
   name: 'stop',
   description: 'Remove filter',
+  author: 'Gtajisan',
   adminOnly: true,
 
   async execute(ctx, args, db, config, goat) {

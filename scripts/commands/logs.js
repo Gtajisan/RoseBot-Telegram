@@ -1,6 +1,7 @@
 module.exports = {
   name: 'logs',
   description: 'Show admin logs',
+  author: 'Gtajisan',
   adminOnly: true,
 
   async execute(ctx, args, db, config, goat) {

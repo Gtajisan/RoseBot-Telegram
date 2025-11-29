@@ -1,6 +1,7 @@
 module.exports = {
   name: 'locks',
   description: 'Show locked items',
+  author: 'Gtajisan',
   adminOnly: false,
 
   async execute(ctx, args, db, config, goat) {

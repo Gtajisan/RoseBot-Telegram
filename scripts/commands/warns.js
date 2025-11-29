@@ -1,6 +1,7 @@
 module.exports = {
   name: 'warns',
   description: 'Check user warns',
+  author: 'Gtajisan',
   adminOnly: true,
 
   async execute(ctx, args, db, config, goat) {

@@ -1,6 +1,7 @@
 module.exports = {
   name: 'translate',
   description: 'Translate text',
+  author: 'Gtajisan',
   adminOnly: false,
 
   async execute(ctx, args, db, config, goat) {

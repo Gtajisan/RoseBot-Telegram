@@ -1,6 +1,7 @@
 module.exports = {
   name: 'unban',
   description: 'Unban user',
+  author: 'Gtajisan',
   adminOnly: true,
 
   async execute(ctx, args, db, config, goat) {

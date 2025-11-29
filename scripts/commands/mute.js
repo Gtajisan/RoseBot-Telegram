@@ -1,6 +1,7 @@
 module.exports = {
   name: 'mute',
   description: 'Mute user',
+  author: 'Gtajisan',
   adminOnly: true,
 
   async execute(ctx, args, db, config, goat) {
