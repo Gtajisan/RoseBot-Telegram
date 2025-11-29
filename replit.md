@@ -1,12 +1,19 @@
-# Rose Bot - Telegram Edition
+# Rose Bot - Telegram Edition (Node.js)
 
 ## Overview
 
-Rose Bot is a professional, modular Telegram bot built in Java that combines architectural patterns from Rose-Bot and GoatBot-V2. The bot provides a foundation for building feature-rich Telegram applications with admin management, user moderation, and extensible command handling. It's designed as a Maven project with clear separation of concerns and a plugin-style command system.
+Rose Bot is a production-ready Telegram bot built with Node.js + Telegraf combining GoatBot-V2 architecture with Rose Bot moderation features and Baka-Chan anime/fun commands. Features 146+ commands, async/await database operations, SQLite storage, Express.js dashboard, and Render/Replit deployment support.
 
 ## User Preferences
 
 Preferred communication style: Simple, everyday language.
+
+## Recent Updates (Latest Session)
+
+- ✅ **Batch Command Integration**: Converted 78+ commands from Goatbot-updated repository to Telegram format
+- ✅ **Enhanced /edit Command**: Now supports Nano-Banana AI image editing with prompt-based processing
+- ✅ **Command Count**: Expanded from 68 to 146+ total commands
+- ✅ **Database Migration**: Async/await SQLite operations for Node.js 25.2.1 compatibility
 
 ## System Architecture
 
