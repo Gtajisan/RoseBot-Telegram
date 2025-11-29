@@ -1,0 +1,50 @@
+2025-11-29T08:51:54.610736536Z ℹ️ [2025-11-29T08:51:54.610Z] [INFO] ✅ Command loaded: /shortcut 
+2025-11-29T08:51:54.610964181Z ℹ️ [2025-11-29T08:51:54.610Z] [INFO] ✅ Command loaded: /sing 
+2025-11-29T08:51:54.611233428Z ❌ [2025-11-29T08:51:54.611Z] [ERROR] Failed to load command slap.js: Missing catch or finally after try 
+2025-11-29T08:51:54.611475693Z ℹ️ [2025-11-29T08:51:54.611Z] [INFO] ✅ Command loaded: /sorthelp 
+2025-11-29T08:51:54.611700208Z ℹ️ [2025-11-29T08:51:54.611Z] [INFO] ✅ Command loaded: /spamban 
+2025-11-29T08:51:54.611933874Z ℹ️ [2025-11-29T08:51:54.611Z] [INFO] ✅ Command loaded: /start 
+2025-11-29T08:51:54.612209131Z ❌ [2025-11-29T08:51:54.612Z] [ERROR] Failed to load command stats.js: Missing catch or finally after try 
+2025-11-29T08:51:54.612503137Z ❌ [2025-11-29T08:51:54.612Z] [ERROR] Failed to load command stop.js: Missing catch or finally after try 
+2025-11-29T08:51:54.612722662Z ℹ️ [2025-11-29T08:51:54.612Z] [INFO] ✅ Command loaded: /stopall 
+2025-11-29T08:51:54.612960318Z ℹ️ [2025-11-29T08:51:54.612Z] [INFO] ✅ Command loaded: /tempban 
+2025-11-29T08:51:54.613183583Z ℹ️ [2025-11-29T08:51:54.613Z] [INFO] ✅ Command loaded: /texttoimage 
+2025-11-29T08:51:54.613455949Z ℹ️ [2025-11-29T08:51:54.613Z] [INFO] ✅ Command loaded: /thread 
+2025-11-29T08:51:54.702086258Z ℹ️ [2025-11-29T08:51:54.701Z] [INFO] ✅ Command loaded: /tid 
+2025-11-29T08:51:54.702345344Z ℹ️ [2025-11-29T08:51:54.702Z] [INFO] ✅ Command loaded: /translate 
+2025-11-29T08:51:54.702621901Z ℹ️ [2025-11-29T08:51:54.702Z] [INFO] ✅ Command loaded: /uid 
+2025-11-29T08:51:54.702894467Z ℹ️ [2025-11-29T08:51:54.702Z] [INFO] ✅ Command loaded: /unban 
+2025-11-29T08:51:54.703235055Z ❌ [2025-11-29T08:51:54.703Z] [ERROR] Failed to load command unlock.js: Missing catch or finally after try 
+2025-11-29T08:51:54.703619624Z ❌ [2025-11-29T08:51:54.703Z] [ERROR] Failed to load command unmute.js: Missing catch or finally after try 
+2025-11-29T08:51:54.70389063Z ❌ [2025-11-29T08:51:54.703Z] [ERROR] Failed to load command unpin.js: Missing catch or finally after try 
+2025-11-29T08:51:54.704195607Z ℹ️ [2025-11-29T08:51:54.704Z] [INFO] ✅ Command loaded: /unsend 
+2025-11-29T08:51:54.704450193Z ℹ️ [2025-11-29T08:51:54.704Z] [INFO] ✅ Command loaded: /uptime 
+2025-11-29T08:51:54.704688469Z ℹ️ [2025-11-29T08:51:54.704Z] [INFO] ✅ Command loaded: /update 
+2025-11-29T08:51:54.705016886Z ❌ [2025-11-29T08:51:54.704Z] [ERROR] Failed to load command uptime.js: Missing catch or finally after try 
+2025-11-29T08:51:54.705267472Z ℹ️ [2025-11-29T08:51:54.705Z] [INFO] ✅ Command loaded: /user 
+2025-11-29T08:51:54.705562829Z ℹ️ [2025-11-29T08:51:54.705Z] [INFO] ✅ Command loaded: /userinfo 
+2025-11-29T08:51:54.705842996Z ❌ [2025-11-29T08:51:54.705Z] [ERROR] Failed to load command users.js: Missing catch or finally after try 
+2025-11-29T08:51:54.706072461Z ℹ️ [2025-11-29T08:51:54.706Z] [INFO] ✅ Command loaded: /vip 
+2025-11-29T08:51:54.706368448Z ℹ️ [2025-11-29T08:51:54.706Z] [INFO] ✅ Command loaded: /waifu 
+2025-11-29T08:51:54.706654535Z ℹ️ [2025-11-29T08:51:54.706Z] [INFO] ✅ Command loaded: /warn 
+2025-11-29T08:51:54.706912171Z ℹ️ [2025-11-29T08:51:54.706Z] [INFO] ✅ Command loaded: /warnlimit 
+2025-11-29T08:51:54.707172877Z ℹ️ [2025-11-29T08:51:54.707Z] [INFO] ✅ Command loaded: /warnmode 
+2025-11-29T08:51:54.707469124Z ❌ [2025-11-29T08:51:54.707Z] [ERROR] Failed to load command warns.js: Missing catch or finally after try 
+2025-11-29T08:51:54.70771978Z ℹ️ [2025-11-29T08:51:54.707Z] [INFO] ✅ Command loaded: /warntime 
+2025-11-29T08:51:54.707972056Z ℹ️ [2025-11-29T08:51:54.707Z] [INFO] ✅ Command loaded: /weather 
+2025-11-29T08:51:54.708243082Z ❌ [2025-11-29T08:51:54.708Z] [ERROR] Failed to load command welcome.js: Missing catch or finally after try 
+2025-11-29T08:51:54.708509978Z ℹ️ [2025-11-29T08:51:54.708Z] [INFO] ✅ Command loaded: /whois 
+2025-11-29T08:51:54.708747884Z ℹ️ [2025-11-29T08:51:54.708Z] [INFO] ✅ Command loaded: /whitelist 
+2025-11-29T08:51:54.708978239Z ℹ️ [2025-11-29T08:51:54.708Z] [INFO] ✅ Command loaded: /ytb 
+2025-11-29T08:51:54.708985409Z ℹ️ [2025-11-29T08:51:54.708Z] [INFO] 📋 Total commands loaded: 109 
+2025-11-29T08:51:54.709522052Z ℹ️ [2025-11-29T08:51:54.709Z] [INFO] ✅ Event loaded: group_join 
+2025-11-29T08:51:54.709782378Z ℹ️ [2025-11-29T08:51:54.709Z] [INFO] ✅ Event loaded: message 
+2025-11-29T08:51:54.709786468Z ℹ️ [2025-11-29T08:51:54.709Z] [INFO] 📡 Total events: 2 
+2025-11-29T08:51:54.714530699Z ℹ️ [2025-11-29T08:51:54.714Z] [INFO] 📊 Dashboard API on port 3000 
+2025-11-29T08:51:57.559000305Z ==> Your service is live 🎉
+2025-11-29T08:51:57.753160367Z ==> 
+2025-11-29T08:51:57.941842661Z ==> ///////////////////////////////////////////////////////////
+2025-11-29T08:51:58.129523574Z ==> 
+2025-11-29T08:51:58.314163267Z ==> Available at your primary URL https://rosebot-telegram.onrender.com
+2025-11-29T08:51:58.49962481Z ==> 
+2025-11-29T08:51:58.685539984Z ==> ///////////////////////////////////////////////////////////

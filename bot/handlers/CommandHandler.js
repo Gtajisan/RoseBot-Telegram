@@ -25,7 +25,12 @@ class CommandHandler {
     for (const file of files) {
       try {
         const filePath = path.join(absoluteDir, file);
-        delete require.cache[require.resolve(filePath)];
+        // Clear all cache entries for this file
+        Object.keys(require.cache).forEach(key => {
+          if (key.includes(file) || key.endsWith(filePath)) {
+            delete require.cache[key];
+          }
+        });
         const cmd = require(filePath);
 
         // Validate command structure

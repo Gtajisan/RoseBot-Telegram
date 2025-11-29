@@ -2,3 +2,12 @@ modules = ["nodejs-20"]
 
 [nix]
 channel = "stable-25_05"
+
+[userenv]
+
+[userenv.shared]
+TELEGRAM_BOT_TOKEN = "8263644692:AAGta6OQq7NKb2jiV01j6DKPQlgOgktr-Qw"
+
+[[ports]]
+localPort = 3000
+externalPort = 80
