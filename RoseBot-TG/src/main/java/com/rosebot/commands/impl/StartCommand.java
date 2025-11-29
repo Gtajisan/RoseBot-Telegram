@@ -5,24 +5,31 @@ import com.rosebot.core.RoseBot;
 import org.telegram.telegrambots.meta.api.objects.Message;
 
 /**
- * /start command - welcome message
+ * CMD: /start
+ * Description: Welcome message and bot introduction
+ * Usage: /start
+ * Admin: false
  */
 public class StartCommand implements ICommand {
+    
+    public StartCommand() {}
+
     @Override
     public void execute(Message message, RoseBot bot) {
         long chatId = message.getChatId();
         String userName = message.getFrom().getFirstName();
         
-        String response = "🌹 <b>Welcome to Rose Bot!</b>\n\n" +
-                "Hello " + userName + "! I'm Rose, your personal Telegram assistant.\n\n" +
-                "<b>Features:</b>\n" +
-                "• Group moderation\n" +
-                "• User management\n" +
-                "• Custom commands\n" +
-                "• And much more!\n\n" +
-                "Use /help to see all available commands.";
+        String text = "🌹 <b>Welcome to Rose Bot!</b>\n\n" +
+                "Hello <b>" + userName + "</b>! I'm Rose, your personal Telegram assistant.\n\n" +
+                "<b>🎯 Features:</b>\n" +
+                "• Group moderation & management\n" +
+                "• User tracking & statistics\n" +
+                "• Admin commands & controls\n" +
+                "• Fun & utility functions\n" +
+                "• Event-driven architecture\n\n" +
+                "Use /help to see all commands.";
         
-        bot.sendMessage(chatId, response);
+        bot.sendMessage(chatId, text);
     }
 
     @Override
@@ -32,11 +39,16 @@ public class StartCommand implements ICommand {
 
     @Override
     public String getDescription() {
-        return "Welcome message";
+        return "Welcome to Rose Bot";
     }
 
     @Override
     public String getUsage() {
         return "/start";
+    }
+
+    @Override
+    public boolean hasPermission(Message message) {
+        return true;
     }
 }

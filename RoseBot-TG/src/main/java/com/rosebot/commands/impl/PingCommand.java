@@ -5,15 +5,17 @@ import com.rosebot.core.RoseBot;
 import org.telegram.telegrambots.meta.api.objects.Message;
 
 /**
- * /ping command - bot status
+ * CMD: /ping
+ * Description: Check bot status and latency
+ * Usage: /ping
+ * Admin: false
  */
 public class PingCommand implements ICommand {
+
     @Override
     public void execute(Message message, RoseBot bot) {
-        long chatId = message.getChatId();
         long startTime = System.currentTimeMillis();
-        
-        bot.sendSuccess(chatId, "Pong! Response time: " + (System.currentTimeMillis() - startTime) + "ms");
+        bot.sendSuccess(message.getChatId(), "Pong! ⚡ Latency: " + (System.currentTimeMillis() - startTime) + "ms");
     }
 
     @Override
@@ -23,11 +25,16 @@ public class PingCommand implements ICommand {
 
     @Override
     public String getDescription() {
-        return "Check bot status";
+        return "Check bot status and latency";
     }
 
     @Override
     public String getUsage() {
         return "/ping";
+    }
+
+    @Override
+    public boolean hasPermission(Message message) {
+        return true;
     }
 }
