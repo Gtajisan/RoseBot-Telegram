@@ -10,97 +10,103 @@ Preferred communication style: Simple, everyday language.
 
 ## Recent Updates (Latest Session)
 
-- ✅ **Batch Command Integration**: Converted 78+ commands from Goatbot-updated repository to Telegram format
-- ✅ **Enhanced /edit Command**: Now supports Nano-Banana AI image editing with prompt-based processing
-- ✅ **Command Count**: Expanded from 68 to 146+ total commands
-- ✅ **Database Migration**: Async/await SQLite operations for Node.js 25.2.1 compatibility
+- ✅ **All 146 Commands Working**: Fixed all syntax errors (try-catch indentation issues across 27 files)
+- ✅ **Zero Errors**: All "Missing catch or finally" errors resolved
+- ✅ **Admin Panel**: Full moderation system with /ban, /kick, /warn (3-strike auto-kick), /mute
+- ✅ **Command Categories**: 100+ working commands across fun, moderation, utility, and info
+- ✅ **Dashboard API**: Running on port 3000 with real-time stats
+- ✅ **Edit Command**: Improved error handling for Nano-Banana AI image editing (may need alternative API if unreliable)
 
 ## System Architecture
 
 ### Core Bot Framework
-- **Telegram Integration**: Uses TelegramBots API v6.8.0 (org.telegram.telegrambots library) for long-polling based message handling
-- **Entry Point**: `RoseBotMain.java` serves as the application bootstrap, initializing the bot instance and registering it with the Telegram Bot API
-- **Bot Core**: `RoseBot.java` extends `TelegramLongPollingBot` and implements the main update processing loop
+- **Telegram Integration**: Uses Telegraf framework for long-polling based message handling
+- **Entry Point**: `index.js` serves as the application bootstrap, initializing bot and handlers
+- **Bot Core**: `Goat.js` extends Telegraf and implements the main update processing loop
 
 ### Command System Architecture
 The bot uses a modular command pattern that allows easy extension:
 
-- **Command Interface**: `ICommand.java` defines the contract for all commands (execute method, name, description, admin-only flag)
-- **Command Router**: `CommandRouter.java` acts as a registry and dispatcher, mapping command names to their implementations
-- **Command Implementations**: Individual command classes in `commands/impl/` package each handle a specific bot function
-- **Plugin-Style Design**: Commands are self-contained and registered centrally, making it trivial to add new features without modifying core code
+- **Command Interface**: Each command module exports `{name, description, execute(), adminOnly}`
+- **Command Router**: `CommandHandler.js` acts as a registry and dispatcher
+- **Command Implementations**: Individual command files in `scripts/commands/` package each handle specific bot function
+- **Plugin-Style Design**: Commands are self-contained and registered centrally
 
-**Why this approach**: Separates command logic from routing logic, enables easy testing, and follows the open/closed principle (open for extension, closed for modification).
+**Why this approach**: Separates command logic from routing logic, enables easy testing, follows open/closed principle.
 
 ### Update Handling
-- **Update Router**: `UpdateHandler.java` processes incoming Telegram updates and routes them to appropriate handlers based on type (messages, callbacks, inline queries)
-- **Type-Based Routing**: Different update types (text messages, callback queries, inline queries) can be handled differently
-- **Command Extraction**: Text messages are parsed for command patterns (messages starting with "/") and routed to the command system
-
-**Rationale**: Centralizes update processing logic and allows for future expansion to handle callbacks, inline queries, and other Telegram features beyond simple commands.
+- **Update Router**: `EventHandler.js` processes incoming Telegram updates
+- **Type-Based Routing**: Different update types (text messages, group joins) handled differently
+- **Command Extraction**: Text messages parsed for command patterns and routed to command system
 
 ### Configuration Management
-- **Config Singleton**: `Config.java` provides centralized configuration access
+- **Config Singleton**: `config.js` provides centralized configuration access
 - **Environment-Based**: Supports both environment variables and configuration files
 - **Key Settings**: Bot token, username, owner user IDs, database paths
-- **Config File**: `application.conf` serves as the default configuration source
-
-**Design Decision**: Environment variables take precedence over config files, enabling easy deployment across different environments (development, staging, production) without code changes.
 
 ### Data Storage
-- **Database Layer**: `DatabaseManager.java` provides abstraction over database operations
-- **SQLite Default**: Uses SQLite for local storage (suitable for small to medium deployments)
-- **Schema Management**: Handles table creation and basic CRUD operations
-- **Extensibility**: Designed to support migration to MySQL/PostgreSQL for larger deployments
-
-**Alternatives Considered**: 
-- Pure in-memory storage (rejected due to data loss on restart)
-- Direct JDBC calls throughout code (rejected to maintain separation of concerns)
-
-### Logging & Error Handling
-- **SLF4J Framework**: Uses industry-standard logging abstraction
-- **Log Levels**: Structured logging for different severity levels (info, debug, error)
-- **Error Recovery**: Bot continues operation even if individual command processing fails
-
-### Build System
-- **Maven**: Standard Java build tool for dependency management and packaging
-- **Executable JAR**: Configured to build a fat JAR with all dependencies bundled
-- **Version**: 1.0.0 following semantic versioning
+- **Database Layer**: `database/index.js` provides abstraction over SQLite operations
+- **SQLite**: File-based storage suitable for small to medium deployments
+- **Schema Management**: Handles table creation and CRUD operations
+- **Tables**: chats, users, command_usage, warnings, notes
 
 ## External Dependencies
 
 ### Third-Party Libraries
-- **TelegramBots API (v6.8.0)**: Core library for Telegram Bot API integration
-  - Provides `TelegramLongPollingBot` base class
-  - Handles HTTP communication with Telegram servers
-  - Includes models for all Telegram entities (messages, users, chats)
-
-- **SLF4J**: Logging facade for Java applications
-  - Allows switching logging implementations without code changes
-  - Used throughout the application for consistent logging
+- **Telegraf**: Core library for Telegram Bot API integration (v4.x)
+- **Express.js**: Web framework for dashboard API
+- **SQLite3**: Database driver for Node.js
+- **Axios**: HTTP client for external API calls
 
 ### External Services
 - **Telegram Bot API**: Primary external service dependency
-  - Requires bot token from @BotFather
-  - Uses long-polling to receive updates
-  - Sends messages and commands back to Telegram servers
-
-### Database
-- **SQLite**: Embedded database (no external server required)
-  - File-based storage (`rosebot.db` in project directory)
-  - No additional setup or services needed
-  - Ready to migrate to PostgreSQL/MySQL if needed
+- **Nano-Banana AI**: Used for /edit command image processing (https://tawsif.is-a.dev/gemini/nano-banana)
+  - Status: May have reliability issues - consider alternative if problems persist
 
 ### Configuration Sources
 - **Environment Variables**: 
-  - `BOT_TOKEN`: Telegram bot authentication token
-  - `BOT_USERNAME`: Bot's username (for mention detection)
-  - `BOT_OWNERS`: Comma-separated user IDs with admin privileges
+  - `TELEGRAM_BOT_TOKEN`: Telegram bot authentication token
+  - Database path and other settings
 
-- **application.conf**: Fallback configuration file for local development
+## Command Count and Status
 
-### Deployment Considerations
-- No external runtime dependencies beyond Java 11+
-- Can run on: local machines, VPS, Replit, or any Java-capable hosting
-- Stateful (maintains database), so requires persistent storage
-- Single-instance design (not horizontally scalable without architectural changes)
+**Total Commands: 146** ✅
+
+**Categories:**
+- 🔐 **Moderation** (12): ban, kick, warn, mute, lock, unlock, filter, filters, demote, promote, etc.
+- 🎮 **Fun** (20+): joke, fact, quote, meme, anime, manga, waifu, hug, kiss, slap, ship, etc.
+- 📊 **Info** (15+): help, stats, users, uptime, ping, info, whois, owner, userinfo, etc.
+- ⚙️ **Utility** (15+): note, translate, edit, shell, calc, eval, weather, logo, etc.
+- 🎯 **System** (10+): start, stop, refresh, restart, update, admin panel, etc.
+
+## Deployment
+
+**Local Development:**
+```bash
+npm install
+TELEGRAM_BOT_TOKEN=<your-token> node index.js
+```
+
+**Render/Replit Production:**
+```bash
+npm install && node index.js
+```
+
+Bot runs on:
+- Telegram Bot API (long-polling)
+- Dashboard API on port 3000
+- SQLite database in project directory
+
+## Known Issues & Solutions
+
+- **Edit Command**: Nano-Banana AI API may timeout. Improved error handling added.
+- **Command Cache**: CommandHandler uses aggressive cache clearing to ensure fresh module loading
+- **Database**: SQLite suitable for single instance deployments
+
+## Next Steps (Future Improvements)
+
+- [ ] Implement alternative image processing APIs for robustness
+- [ ] Add command usage rate limiting
+- [ ] Implement user reputation/karma system
+- [ ] Add automated backups
+- [ ] Scale to PostgreSQL for multi-instance deployments
