@@ -6,17 +6,16 @@ module.exports = {
 
   async execute(ctx, args, db, config, goat) {
     try {
-    const uptime = Math.floor(process.uptime());
-    const days = Math.floor(uptime / 86400);
-    const hours = Math.floor((uptime % 86400) / 3600);
-    const mins = Math.floor((uptime % 3600) / 60);
-    const secs = uptime % 60;
+      const uptime = Math.floor(process.uptime());
+      const days = Math.floor(uptime / 86400);
+      const hours = Math.floor((uptime % 86400) / 3600);
+      const mins = Math.floor((uptime % 3600) / 60);
+      const secs = uptime % 60;
 
-    const str = days > 0 ? `${days}d ${hours}h ${mins}m ${secs}s` : `${hours}h ${mins}m ${secs}s`;
-    await goat.reply(ctx, `⏱️ Uptime: *${str}*`);
-  }
-
+      const str = days > 0 ? `${days}d ${hours}h ${mins}m ${secs}s` : `${hours}h ${mins}m ${secs}s`;
+      await goat.reply(ctx, `⏱️ Uptime: *${str}*`, { parse_mode: 'Markdown' });
     } catch (error) {
       await goat.reply(ctx, `❌ Error: ${error.message}`);
     }
+  }
 };
