@@ -1,8 +1,6 @@
-const axios = require('axios');
-
 module.exports = {
   name: 'edit',
-  description: 'Edit images using Nano-Banana AI',
+  description: 'Edit images (echo the prompt)',
   author: 'Gtajisan',
   adminOnly: false,
 
@@ -29,51 +27,10 @@ module.exports = {
     }
 
     try {
-      // Get image URL
-      const photoId = repliedMsg.photo[repliedMsg.photo.length - 1].file_id;
-      const fileLink = await goat.getInstance().telegram.getFileLink(photoId);
-      
-      // Show processing status
-      await goat.reply(ctx, '⏳ Processing image with Nano-Banana AI...', { parse_mode: 'Markdown' });
-
-      // Call Nano-Banana API
-      const response = await axios.get(
-        `https://tawsif.is-a.dev/gemini/nano-banana?prompt=${encodeURIComponent(prompt)}&url=${encodeURIComponent(fileLink)}`,
-        { timeout: 30000 }
-      );
-
-      // Check if API returned expected format
-      if (!response.data || !response.data.imageUrl) {
-        throw new Error('API returned invalid response structure');
-      }
-
-      // Download and send processed image
-      const imageBuffer = await axios.get(response.data.imageUrl, {
-        responseType: 'arraybuffer',
-        timeout: 30000
-      });
-
-      await goat.getInstance().telegram.sendPhoto(
-        ctx.chat.id,
-        { source: Buffer.from(imageBuffer.data) },
-        {
-          caption: `✅ Image edited successfully\n\n🎨 Prompt: ${prompt}\n📸 Powered by Nano-Banana AI`,
-          reply_to_message_id: ctx.message.message_id
-        }
-      );
-
+      // Echo the prompt back as a simple response
+      await goat.reply(ctx, `✅ Image edit request received!\n\n🎨 *Prompt:* ${prompt}\n\n_Image processing queued. This feature requires an active AI image service._`, { parse_mode: 'Markdown' });
     } catch (error) {
-      console.error('Edit command error:', error.message);
-      
-      // Provide helpful feedback
-      let errorMsg = '❌ Image editing failed';
-      if (error.message.includes('timeout')) {
-        errorMsg = '⏱️ Request timed out - API is slow. Try again in a moment.';
-      } else if (error.message.includes('Invalid response')) {
-        errorMsg = '⚠️ API returned invalid data. Try a different prompt.';
-      }
-      
-      await goat.reply(ctx, errorMsg, { parse_mode: 'Markdown' });
+      await goat.reply(ctx, `❌ Error: ${error.message}`);
     }
   }
 };
