@@ -1,6 +1,7 @@
 module.exports = {
   name: 'manga',
   description: 'Get manga info',
+  author: 'Gtajisan',
   adminOnly: false,
 
   async execute(ctx, args, db, config, goat) {

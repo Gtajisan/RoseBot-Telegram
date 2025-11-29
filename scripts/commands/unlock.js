@@ -1,6 +1,7 @@
 module.exports = {
   name: 'unlock',
   description: 'Unlock message types',
+  author: 'Gtajisan',
   adminOnly: true,
 
   async execute(ctx, args, db, config, goat) {

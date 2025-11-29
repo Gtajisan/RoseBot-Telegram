@@ -1,6 +1,7 @@
 module.exports = {
   name: 'demote',
   description: 'Demote admin to user',
+  author: 'Gtajisan',
   adminOnly: true,
 
   async execute(ctx, args, db, config, goat) {

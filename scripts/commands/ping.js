@@ -1,6 +1,7 @@
 module.exports = {
   name: 'ping',
   description: 'Check latency',
+  author: 'Gtajisan',
   adminOnly: false,
 
   async execute(ctx, args, db, config, goat) {

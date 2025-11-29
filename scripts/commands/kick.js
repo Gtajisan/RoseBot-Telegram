@@ -1,6 +1,7 @@
 module.exports = {
   name: 'kick',
   description: 'Kick user',
+  author: 'Gtajisan',
   adminOnly: true,
 
   async execute(ctx, args, db, config, goat) {

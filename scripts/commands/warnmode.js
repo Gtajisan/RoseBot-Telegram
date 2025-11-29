@@ -1,6 +1,7 @@
 module.exports = {
   name: 'warnmode',
   description: 'Set warn mode (ban/kick/mute)',
+  author: 'Gtajisan',
   adminOnly: true,
 
   async execute(ctx, args, db, config, goat) {

@@ -3,6 +3,7 @@ const axios = require('axios');
 module.exports = {
   name: 'meme',
   description: 'Get random meme image',
+  author: 'Gtajisan',
   adminOnly: false,
 
   async execute(ctx, args, db, config, goat) {

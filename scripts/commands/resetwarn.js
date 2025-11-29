@@ -1,6 +1,7 @@
 module.exports = {
   name: 'resetwarn',
   description: 'Reset user warns',
+  author: 'Gtajisan',
   adminOnly: true,
 
   async execute(ctx, args, db, config, goat) {

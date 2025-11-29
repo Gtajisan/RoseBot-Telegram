@@ -1,6 +1,7 @@
 module.exports = {
   name: 'start',
   description: 'Welcome message',
+  author: 'Gtajisan',
   adminOnly: false,
 
   async execute(ctx, args, db, config, goat) {

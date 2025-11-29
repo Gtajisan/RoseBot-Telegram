@@ -1,6 +1,7 @@
 module.exports = {
   name: 'help',
   description: 'Show all commands',
+  author: 'Gtajisan',
   adminOnly: false,
 
   async execute(ctx, args, db, config, goat) {

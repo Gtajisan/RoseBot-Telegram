@@ -1,6 +1,7 @@
 module.exports = {
   name: 'resetwelcome',
   description: 'Reset welcome message',
+  author: 'Gtajisan',
   adminOnly: true,
 
   async execute(ctx, args, db, config, goat) {

@@ -1,6 +1,7 @@
 module.exports = {
   name: 'chatinfo',
   description: 'Get chat info',
+  author: 'Gtajisan',
   adminOnly: false,
 
   async execute(ctx, args, db, config, goat) {

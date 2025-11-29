@@ -1,6 +1,7 @@
 module.exports = {
   name: 'allowlist',
   description: 'Add URL to whitelist',
+  author: 'Gtajisan',
   adminOnly: true,
 
   async execute(ctx, args, db, config, goat) {

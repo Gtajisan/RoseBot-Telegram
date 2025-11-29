@@ -1,6 +1,7 @@
 module.exports = {
   name: 'purge',
   description: 'Delete messages',
+  author: 'Gtajisan',
   adminOnly: true,
 
   async execute(ctx, args, db, config, goat) {

@@ -1,6 +1,7 @@
 module.exports = {
   name: 'tempban',
   description: 'Temporary ban user',
+  author: 'Gtajisan',
   adminOnly: true,
 
   async execute(ctx, args, db, config, goat) {

@@ -1,6 +1,7 @@
 module.exports = {
   name: 'menu',
   description: 'Show command menu',
+  author: 'Gtajisan',
   adminOnly: false,
 
   async execute(ctx, args, db, config, goat) {
