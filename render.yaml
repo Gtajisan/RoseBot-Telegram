@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: rose-bot
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: TELEGRAM_BOT_TOKEN
+        scope: build,runtime
+      - key: NODE_ENV
+        value: production
+      - key: API_PORT
+        value: 3000

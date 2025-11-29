@@ -1,0 +1,82 @@
+I want a fully functional Telegram bot in Node.js using Telegraf, based on GoatBot-V2 structure, with all commands from Rose Bot and Baka-Chan-v1, including AI/Image commands like edit.js. The bot should use SQLite for database storage (like GoatBot), instead of MongoDB or lowdb, and be deployable on Render or Replit.
+
+Requirements:
+1. SQLite Support
+
+Use sqlite3 or better-sqlite3 for database
+
+Database schema should store:
+
+Users (ID, role, warnings)
+
+Groups (ID, prefix, welcome/goodbye messages, locks/filters)
+
+Command usage/cooldowns
+
+Notes/Auto-reply filters
+
+Replace any MongoDB or lowdb usage with SQLite
+
+Ensure async-safe queries
+
+2. Telegram API Adaptation
+
+Replace Messenger API calls with Telegram API (ctx.reply(), ctx.replyWithPhoto(), ctx.telegram.editMessageText())
+
+AI/Image commands: support reply_to_message.photo, pick largest photo, show loading ⏳, send final image, handle errors
+
+Command loader auto-detects all /scripts/cmds/* commands
+
+Validate commands have config and onStart, skip invalid files
+
+3. Include All Commands
+
+Rose Bot: moderation, admin, welcome/goodbye, locks/filters, notes, warn system, utilities
+
+Baka-Chan: AI/Image, fun, anime, group tools
+
+4. Dashboard (Like GoatBot)
+
+Express-based dashboard
+
+Telegram OAuth login
+
+Show bot stats, connected groups, command usage
+
+Manage group settings: prefix, welcome messages, locks/filters
+
+REST API for commands
+
+Fully functional on Render
+
+5. Render Deployment Fixes
+
+Node.js version compatible with Render
+
+Environment variables: TELEGRAM_BOT_TOKEN, BOT_PREFIX, BOT_ADMIN_ID
+
+Ensure SQLite file works in Render environment
+
+Global error handling for unhandled rejections and uncaught exceptions
+
+Logs visible in console
+
+6. Testing & Auto-Fix
+
+Scan all commands for syntax errors, missing await, invalid Telegram API usage
+
+Auto-fix common issues
+
+Ensure AI/Image commands, fun commands, and moderation commands work
+
+Ensure SQLite queries run correctly in production
+
+7. Output
+
+Fully working Telegram GoatBot-V2 with SQLite support
+
+All commands (Rose + Baka-Chan) converted to Telegram
+
+Fully tested, error-free, and Render-deployable
+
+Dashboard fully functional and connected to SQLite database
