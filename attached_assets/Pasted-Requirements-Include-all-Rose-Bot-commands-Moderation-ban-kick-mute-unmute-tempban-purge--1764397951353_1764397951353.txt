@@ -1,0 +1,103 @@
+Requirements:
+
+Include all Rose Bot commands:
+
+Moderation: ban, kick, mute, unmute, tempban, purge
+
+Admin: promote, demote, adminlist
+
+Welcome/Goodbye: setwelcome, resetwelcome, setgoodbye
+
+Locks/Filters: lock, unlock, allowlist
+
+Notes & Auto-reply: filter, stop, stopall
+
+Warn system: warn, dwarn, resetwarn, warnlimit, warnmode
+
+Utilities: id, info, whois
+
+Include all Baka-Chan commands:
+
+AI/Image: edit.js, waifu.js, logo.js, meme.js
+
+Fun: slap.js, hug.js, kiss.js, etc.
+
+Anime: anime.js
+
+Group tools: setprefix.js, unban.js, etc.
+
+Telegram API adaptation:
+
+Replace Messenger API with ctx, ctx.reply(), ctx.replyWithPhoto(), ctx.telegram.editMessageText(), etc.
+
+AI/Image commands must:
+
+Support reply_to_message.photo
+
+Use largest photo
+
+Send loading message (⏳) and delete after completion
+
+Send final edited image with ctx.replyWithPhoto()
+
+Catch API errors gracefully
+
+Command Loader & Validation:
+
+Load all commands in /scripts/cmds automatically
+
+Only load modules with config and onStart
+
+Log and skip invalid files
+
+Support command cooldowns, roles, prefix, multi-language, database integration
+
+Global Error Handling:
+
+process.on('unhandledRejection', console.error);
+process.on('uncaughtException', console.error);
+
+
+Dashboard:
+
+Express-based dashboard with Telegram OAuth
+
+Show bot stats and group settings
+
+REST API for command management
+
+Testing & Auto-fix:
+
+Scan all files for syntax errors, missing await, invalid Telegram API usage
+
+Automatically fix common issues (missing await, unhandled promises, incorrect API calls)
+
+Ensure all commands run without crashing
+
+Deploy-ready:
+
+package.json with all dependencies (telegraf, axios, express, lowdb/mongodb)
+
+Run with npm install && node index.js
+
+Fully compatible with Replit, Render, or any Node.js host
+
+Logs visible in console; errors caught safely
+
+Final Testing:
+
+Test all command categories (AI/Image, fun, moderation, admin, utilities)
+
+Test message replies, buttons, inline menus
+
+Test group events: join/leave, locks, filters
+
+Validate dashboard and REST API functionality
+
+Output:
+
+A fully production-ready Telegram GoatBot-V2
+
+All commands (Rose + Baka-Chan) converted and error-free
+
+Fully tested, deployable, and Replit/Render ready
