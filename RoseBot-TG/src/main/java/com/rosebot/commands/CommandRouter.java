@@ -33,11 +33,22 @@ public class CommandRouter {
         commands.put("start", new StartCommand());
         commands.put("help", new HelpCommand());
         commands.put("ping", new PingCommand());
+        commands.put("info", new InfoCommand());
+        commands.put("settings", new SettingsCommand());
         
         // Admin commands
         commands.put("admin", new AdminCommand());
         commands.put("ban", new BanCommand());
         commands.put("kick", new KickCommand());
+        commands.put("mod", new ModCommand());
+        commands.put("users", new UsersCommand());
+        
+        // Utility commands
+        commands.put("utils", new UtilsCommand());
+        commands.put("fun", new FunCommand());
+        commands.put("joke", new JokeCommand());
+        commands.put("meme", new MemCommand());
+        commands.put("fact", new FactCommand());
         
         // Owner commands
         commands.put("stats", new StatsCommand());

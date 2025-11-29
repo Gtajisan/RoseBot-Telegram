@@ -13,15 +13,22 @@ public class HelpCommand implements ICommand {
         long chatId = message.getChatId();
         
         String response = "<b>🌹 Rose Bot Commands</b>\n\n" +
-                "<b>Core Commands:</b>\n" +
+                "<b>📌 Core Commands:</b>\n" +
                 "• /start - Welcome message\n" +
                 "• /help - Show this message\n" +
-                "• /ping - Bot status\n\n" +
-                "<b>Admin Commands:</b>\n" +
-                "• /admin - Admin settings\n" +
+                "• /ping - Bot status\n" +
+                "• /info - Bot information\n" +
+                "• /settings - Bot settings\n\n" +
+                "<b>🛡️ Moderation:</b>\n" +
+                "• /admin - Admin panel\n" +
                 "• /ban - Ban user\n" +
-                "• /kick - Kick user\n\n" +
-                "<b>Owner Commands:</b>\n" +
+                "• /kick - Kick user\n" +
+                "• /mod - Mod commands\n" +
+                "• /users - User management\n\n" +
+                "<b>🛠️ Utilities:</b>\n" +
+                "• /utils - Utility commands\n" +
+                "• /fun - Fun commands\n\n" +
+                "<b>📊 Statistics:</b>\n" +
                 "• /stats - Bot statistics\n" +
                 "• /status - Bot status info\n\n" +
                 "Use /help <command> for more info on a specific command.";

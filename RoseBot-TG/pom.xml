@@ -6,11 +6,11 @@
 
     <groupId>com.rosebot</groupId>
     <artifactId>RoseBot-TG</artifactId>
-    <version>1.0.0</version>
+    <version>2.0.0</version>
     <packaging>jar</packaging>
 
-    <name>Rose Bot - Telegram</name>
-    <description>Modular Telegram bot combining Rose-Bot and GoatBot architectures</description>
+    <name>Rose Bot - Telegram (GoatBot-V2 Enhanced)</name>
+    <description>Professional modular Telegram bot with GoatBot-V2 style features and architecture</description>
 
     <properties>
         <maven.compiler.source>11</maven.compiler.source>
@@ -59,11 +59,25 @@
             <version>1.4.3</version>
         </dependency>
 
-        <!-- HTTP Requests -->
+        <!-- HTTP Requests (for API integration) -->
         <dependency>
             <groupId>com.squareup.okhttp3</groupId>
             <artifactId>okhttp</artifactId>
             <version>4.11.0</version>
+        </dependency>
+
+        <!-- REST API (Spark for lightweight server) -->
+        <dependency>
+            <groupId>com.sparkjava</groupId>
+            <artifactId>spark-core</artifactId>
+            <version>2.9.4</version>
+        </dependency>
+
+        <!-- Apache Commons -->
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>3.13.0</version>
         </dependency>
 
         <!-- Testing -->
