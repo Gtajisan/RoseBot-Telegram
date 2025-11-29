@@ -1,0 +1,50 @@
+2025-11-29T07:36:36.025146295Z ℹ️ [2025-11-29T07:36:36.024Z] [INFO] ✅ Command loaded: /logo 
+2025-11-29T07:36:36.025555414Z ℹ️ [2025-11-29T07:36:36.025Z] [INFO] ✅ Command loaded: /logs 
+2025-11-29T07:36:36.025879411Z ℹ️ [2025-11-29T07:36:36.025Z] [INFO] ✅ Command loaded: /manga 
+2025-11-29T07:36:36.026156426Z ℹ️ [2025-11-29T07:36:36.026Z] [INFO] ✅ Command loaded: /meme 
+2025-11-29T07:36:36.123115999Z ℹ️ [2025-11-29T07:36:36.026Z] [INFO] ✅ Command loaded: /menu 
+2025-11-29T07:36:36.123831155Z ℹ️ [2025-11-29T07:36:36.123Z] [INFO] ✅ Command loaded: /mute 
+2025-11-29T07:36:36.124203902Z ℹ️ [2025-11-29T07:36:36.124Z] [INFO] ✅ Command loaded: /note 
+2025-11-29T07:36:36.124542559Z ℹ️ [2025-11-29T07:36:36.124Z] [INFO] ✅ Command loaded: /notes 
+2025-11-29T07:36:36.124832345Z ℹ️ [2025-11-29T07:36:36.124Z] [INFO] ✅ Command loaded: /owner 
+2025-11-29T07:36:36.127942891Z ℹ️ [2025-11-29T07:36:36.127Z] [INFO] ✅ Command loaded: /pin 
+2025-11-29T07:36:36.128164516Z ℹ️ [2025-11-29T07:36:36.128Z] [INFO] ✅ Command loaded: /ping 
+2025-11-29T07:36:36.128466522Z ℹ️ [2025-11-29T07:36:36.128Z] [INFO] ✅ Command loaded: /promote 
+2025-11-29T07:36:36.128723598Z ℹ️ [2025-11-29T07:36:36.128Z] [INFO] ✅ Command loaded: /purge 
+2025-11-29T07:36:36.129056074Z ℹ️ [2025-11-29T07:36:36.128Z] [INFO] ✅ Command loaded: /quote 
+2025-11-29T07:36:36.12932281Z ℹ️ [2025-11-29T07:36:36.129Z] [INFO] ✅ Command loaded: /resetgoodbye 
+2025-11-29T07:36:36.129615296Z ℹ️ [2025-11-29T07:36:36.129Z] [INFO] ✅ Command loaded: /resetwarn 
+2025-11-29T07:36:36.129899202Z ℹ️ [2025-11-29T07:36:36.129Z] [INFO] ✅ Command loaded: /resetwelcome 
+2025-11-29T07:36:36.130546896Z ℹ️ [2025-11-29T07:36:36.130Z] [INFO] ✅ Command loaded: /rmwarn 
+2025-11-29T07:36:36.130557916Z ℹ️ [2025-11-29T07:36:36.130Z] [INFO] ✅ Command loaded: /setgoodbye 
+2025-11-29T07:36:36.130782451Z ℹ️ [2025-11-29T07:36:36.130Z] [INFO] ✅ Command loaded: /setprefix 
+2025-11-29T07:36:36.131031736Z ℹ️ [2025-11-29T07:36:36.130Z] [INFO] ✅ Command loaded: /setwelcome 
+2025-11-29T07:36:36.131301982Z ℹ️ [2025-11-29T07:36:36.131Z] [INFO] ✅ Command loaded: /ship 
+2025-11-29T07:36:36.223505244Z ℹ️ [2025-11-29T07:36:36.223Z] [INFO] ✅ Command loaded: /slap 
+2025-11-29T07:36:36.22373386Z ℹ️ [2025-11-29T07:36:36.223Z] [INFO] ✅ Command loaded: /start 
+2025-11-29T07:36:36.223965174Z ℹ️ [2025-11-29T07:36:36.223Z] [INFO] ✅ Command loaded: /stats 
+2025-11-29T07:36:36.224199509Z ℹ️ [2025-11-29T07:36:36.224Z] [INFO] ✅ Command loaded: /stop 
+2025-11-29T07:36:36.224417924Z ℹ️ [2025-11-29T07:36:36.224Z] [INFO] ✅ Command loaded: /stopall 
+2025-11-29T07:36:36.224666019Z ℹ️ [2025-11-29T07:36:36.224Z] [INFO] ✅ Command loaded: /tempban 
+2025-11-29T07:36:36.224883204Z ℹ️ [2025-11-29T07:36:36.224Z] [INFO] ✅ Command loaded: /translate 
+2025-11-29T07:36:36.225116018Z ℹ️ [2025-11-29T07:36:36.225Z] [INFO] ✅ Command loaded: /unban 
+2025-11-29T07:36:36.225347414Z ℹ️ [2025-11-29T07:36:36.225Z] [INFO] ✅ Command loaded: /unlock 
+2025-11-29T07:36:36.225595699Z ℹ️ [2025-11-29T07:36:36.225Z] [INFO] ✅ Command loaded: /unmute 
+2025-11-29T07:36:36.225802723Z ℹ️ [2025-11-29T07:36:36.225Z] [INFO] ✅ Command loaded: /unpin 
+2025-11-29T07:36:36.226042828Z ℹ️ [2025-11-29T07:36:36.225Z] [INFO] ✅ Command loaded: /uptime 
+2025-11-29T07:36:36.226310894Z ℹ️ [2025-11-29T07:36:36.226Z] [INFO] ✅ Command loaded: /users 
+2025-11-29T07:36:36.226558839Z ℹ️ [2025-11-29T07:36:36.226Z] [INFO] ✅ Command loaded: /waifu 
+2025-11-29T07:36:36.226790524Z ℹ️ [2025-11-29T07:36:36.226Z] [INFO] ✅ Command loaded: /warn 
+2025-11-29T07:36:36.226991958Z ℹ️ [2025-11-29T07:36:36.226Z] [INFO] ✅ Command loaded: /warnlimit 
+2025-11-29T07:36:36.227198533Z ℹ️ [2025-11-29T07:36:36.227Z] [INFO] ✅ Command loaded: /warnmode 
+2025-11-29T07:36:36.227464308Z ℹ️ [2025-11-29T07:36:36.227Z] [INFO] ✅ Command loaded: /warns 
+2025-11-29T07:36:36.227681823Z ℹ️ [2025-11-29T07:36:36.227Z] [INFO] ✅ Command loaded: /warntime 
+2025-11-29T07:36:36.227914888Z ℹ️ [2025-11-29T07:36:36.227Z] [INFO] ✅ Command loaded: /welcome 
+2025-11-29T07:36:36.228188803Z ℹ️ [2025-11-29T07:36:36.228Z] [INFO] ✅ Command loaded: /whois 
+2025-11-29T07:36:36.228195714Z ℹ️ [2025-11-29T07:36:36.228Z] [INFO] 📋 Total commands loaded: 68 
+2025-11-29T07:36:36.228694914Z ℹ️ [2025-11-29T07:36:36.228Z] [INFO] ✅ Event loaded: group_join 
+2025-11-29T07:36:36.22897191Z ℹ️ [2025-11-29T07:36:36.228Z] [INFO] ✅ Event loaded: message 
+2025-11-29T07:36:36.2289781Z ℹ️ [2025-11-29T07:36:36.228Z] [INFO] 📡 Total events: 2 
+2025-11-29T07:36:36.324460942Z ℹ️ [2025-11-29T07:36:36.324Z] [INFO] 📊 Dashboard API on port 3000 
+2025-11-29T07:36:37.715324289Z ❌ [2025-11-29T07:36:37.715Z] [ERROR] Bot launch error: 409: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-11-29T07:36:37.71535183Z ❌ [2025-11-29T07:36:37.715Z] [ERROR] Startup error: 409: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
