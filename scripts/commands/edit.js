@@ -31,7 +31,7 @@ module.exports = {
     try {
       // Get image URL
       const photoId = repliedMsg.photo[repliedMsg.photo.length - 1].file_id;
-      const fileLink = await goat.getInstance().telegram.getFileLink(photoId);
+      const fileLink = String(await goat.getInstance().telegram.getFileLink(photoId));
       
       console.log('📸 Image URL obtained:', fileLink.substring(0, 50) + '...');
       
