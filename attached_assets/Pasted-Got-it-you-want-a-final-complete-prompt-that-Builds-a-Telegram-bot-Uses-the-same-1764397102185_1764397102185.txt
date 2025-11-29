@@ -1,0 +1,223 @@
+Got it — you want a **final, complete prompt** that:
+✔️ Builds a **Telegram bot**
+✔️ Uses the **same repo file structure as GoatBot-V2**
+✔️ Uses **adapted APIs** for Telegram instead of fb-chat-api
+✔️ Includes **all commands from Rose Bot**
+✔️ Includes **your own commands** from **baka-chan-v1/scripts/cmds**
+✔️ And is ready to generate a *full bot project* when pasted into an AI/code generator.
+
+Here is the **final edited master prompt** — just copy–paste into an AI/code generator and it will generate the full Telegram bot project.
+
+---
+
+# ✅ **MASTER PROMPT: Build Telegram GoatBot-V2 (with Rose Bot + Baka Chan commands)**
+
+**Prompt:**
+
+> Create a complete Telegram bot project using Node.js, fully structured using the following folder layout (identical to GoatBot-V2):
+>
+> ```
+> /
+> ├── .github/
+> ├── .vscode/
+> ├── bot/
+> ├── dashboard/
+> ├── database/
+> ├── fb-chat-api/   <-- Delete or replace with telegram-api
+> ├── func/
+> ├── languages/
+> ├── logger/
+> ├── scripts/
+> │   ├── cmds/        <-- all Rose Bot + Baka-Chan-V1 commands go here
+> │   ├── events/
+> │   ├── system/
+> ├── .eslintrc.json
+> ├── .gitignore
+> ├── README.md
+> ├── config.json
+> ├── configCommands.json
+> ├── index.js
+> ├── package.json
+> └── utils.js
+> ```
+>
+> **Replace the fb-chat-api folder with a new folder:**
+>
+> ```
+> telegram-api/
+> ```
+>
+> containing a clean wrapper around **Telegraf** or **grammY**, with:
+> – message sending
+> – buttons
+> – inline keyboards
+> – editing messages
+> – fetching chat info
+> – user info
+> – chat actions
+> – error handler
+>
+> ---
+>
+> ## **🔧 Core Requirements**
+>
+> ### **1. Use Telegram API instead of Facebook**
+>
+> Implement using **Telegraf** (preferred) or grammY.
+> Example structure:
+>
+> ```
+> telegram-api/
+> ├── client.js
+> ├── sendMessage.js
+> ├── editMessage.js
+> ├── deleteMessage.js
+> ├── utils.js
+> ```
+>
+> `client.js` exports the bot instance and handles middleware + rate limits.
+>
+> ---
+>
+> ### **2. Command Loader System (same as GoatBot-V2)**
+>
+> Auto-load commands from:
+>
+> ```
+> scripts/cmds/*
+> ```
+>
+> Each command file format:
+>
+> ```
+> module.exports = {
+>   config: {
+>     name: "ping",
+>     aliases: ["pong"],
+>     author: "Farhan",
+>     cooldown: 3,
+>     role: 0,
+>     description: "Ping command",
+>   },
+>   onStart: async ({ message, args, api }) => {
+>     message.reply("Pong!");
+>   }
+> };
+> ```
+>
+> Keep compatibility with:
+>
+> * config.json
+> * configCommands.json
+> * languages/ folder
+> * logger/
+> * database/ (lowdb or mongodb)
+>
+> ---
+>
+> ## **3. Add ALL Rose Bot Commands**
+>
+> Integrate all major Rose Bot command categories:
+>
+> ✔️ Moderation (ban, kick, warn, mute, unmute, purge)
+> ✔️ Anti-Spam, Anti-Flood
+> ✔️ Info (whois, id, chatinfo, userinfo)
+> ✔️ Utilities (calc, translate, memes, logo gen)
+> ✔️ Group tools (welcome, goodbye, pin, unpin)
+> ✔️ Fun (ship, slap, kiss, hug)
+> ✔️ AFK system
+> ✔️ Notes system
+> ✔️ Filters system
+>
+> Convert ALL Rose Bot commands to **GoatBot-style modules**.
+>
+> ---
+>
+> ## **4. Add commands from baka-chan-v1 repo**
+>
+> Integrate commands from:
+>
+> ```
+> https://github.com/Gtajisan/baka-chan-v1/tree/main/scripts/cmds
+> ```
+>
+> Add them into:
+>
+> ```
+> scripts/cmds/
+> ```
+>
+> Convert to the same format:
+>
+> * anime commands
+> * nsfw filter (disabled by default)
+> * group management
+> * meme & fun commands
+> * AI chat
+>
+> All should work using Telegram API (Telegraf).
+>
+> ---
+>
+> ## **5. Dashboard Folder**
+>
+> Create a simple Express-based dashboard:
+>
+> * login with Telegram OAuth
+> * show bot stats
+> * group settings (welcome, language, prefix, modules)
+> * REST APIs for commands
+>
+> ---
+>
+> ## **6. `index.js`**
+>
+> Should:
+>
+> * start Telegram client
+> * load commands
+> * load events
+> * create database tables
+> * start dashboard server
+> * handle global error logging
+>
+> ---
+>
+> ## **7. Features to Keep Same as GoatBot-V2**
+>
+> ✔ Command cooldown
+> ✔ Anti-crash
+> ✔ Multi-language system
+> ✔ Admin only commands
+> ✔ Event listeners (on join, on leave, on message delete)
+> ✔ Auto updater
+> ✔ Backup & restore
+>
+> ---
+>
+> ## **8. Produce final full project output**
+>
+> **Deliver ALL files, folders, and code fully implemented.**
+> Files must be real code, not placeholders.
+> Commands from Rose Bot AND Baka-Chan must be converted to Telegram format.
+>
+> The bot should be production-ready, modular, and easy to deploy.
+>
+> ---
+>
+> **End of Prompt**
+
+---
+
+# ✅ Want me to generate this bot for you automatically?
+
+I can also:
+
+✔ Build the **full code**
+✔ Create every folder & file
+✔ Convert all Rose commands
+✔ Convert all Baka-Chan commands
+✔ Make a full working Telegraf bot
+✔ Prepare ready-to-run repo
+
+Just say: **“Generate the full project now.”**
