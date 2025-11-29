@@ -42,9 +42,9 @@ module.exports = {
         { timeout: 30000 }
       );
 
-      if (!response.data.imageUrl) {
-        await goat.reply(ctx, '❌ Failed to process image', { parse_mode: 'Markdown' });
-        return;
+      // Check if API returned expected format
+      if (!response.data || !response.data.imageUrl) {
+        throw new Error('API returned invalid response structure');
       }
 
       // Download and send processed image
@@ -63,8 +63,17 @@ module.exports = {
       );
 
     } catch (error) {
-      const errorMsg = error.response?.data?.message || error.message;
-      await goat.reply(ctx, `❌ Error: ${errorMsg}`);
+      console.error('Edit command error:', error.message);
+      
+      // Provide helpful feedback
+      let errorMsg = '❌ Image editing failed';
+      if (error.message.includes('timeout')) {
+        errorMsg = '⏱️ Request timed out - API is slow. Try again in a moment.';
+      } else if (error.message.includes('Invalid response')) {
+        errorMsg = '⚠️ API returned invalid data. Try a different prompt.';
+      }
+      
+      await goat.reply(ctx, errorMsg, { parse_mode: 'Markdown' });
     }
   }
 };
