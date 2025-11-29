@@ -33,11 +33,15 @@ module.exports = {
       const photoId = repliedMsg.photo[repliedMsg.photo.length - 1].file_id;
       const fileLink = await goat.getInstance().telegram.getFileLink(photoId);
       
+      console.log('📸 Image URL obtained:', fileLink.substring(0, 50) + '...');
+      
       // Show processing status
       await goat.reply(ctx, '⏳ Processing image with Nano-Banana AI...', { parse_mode: 'Markdown' });
 
       // Call Nano-Banana API
       const apiUrl = `https://tawsif.is-a.dev/gemini/nano-banana?prompt=${encodeURIComponent(prompt)}&url=${encodeURIComponent(fileLink)}`;
+      
+      console.log('🔗 API URL:', apiUrl.substring(0, 80) + '...');
       
       const response = await axios.get(apiUrl, { 
         timeout: 60000,
@@ -46,16 +50,29 @@ module.exports = {
         }
       });
 
-      if (!response.data || !response.data.imageUrl) {
-        await goat.reply(ctx, '❌ Failed to process image', { parse_mode: 'Markdown' });
+      console.log('📝 API Response:', JSON.stringify(response.data).substring(0, 200));
+
+      // Check response - handle different formats
+      let imageUrl;
+      if (response.data && response.data.imageUrl) {
+        imageUrl = response.data.imageUrl;
+      } else if (response.data && typeof response.data === 'string' && response.data.includes('http')) {
+        imageUrl = response.data;
+      } else {
+        console.error('❌ Invalid response format:', response.data);
+        await goat.reply(ctx, '❌ API returned invalid response format', { parse_mode: 'Markdown' });
         return;
       }
 
+      console.log('🖼️ Generated image URL:', imageUrl.substring(0, 80) + '...');
+
       // Download and send processed image
-      const imageBuffer = await axios.get(response.data.imageUrl, {
+      const imageBuffer = await axios.get(imageUrl, {
         responseType: 'arraybuffer',
         timeout: 30000
       });
+
+      console.log('✅ Image downloaded, size:', imageBuffer.data.length);
 
       await goat.getInstance().telegram.sendPhoto(
         ctx.chat.id,
@@ -67,14 +84,19 @@ module.exports = {
       );
 
     } catch (error) {
-      console.error('Edit command error:', error.message);
+      console.error('❌ Edit command error:', error.message);
+      
+      if (error.response) {
+        console.error('📊 API Status:', error.response.status);
+        console.error('📄 API Response:', JSON.stringify(error.response.data).substring(0, 200));
+      }
       
       let errorMsg = '❌ Image processing failed';
       if (error.code === 'ECONNABORTED' || error.message.includes('timeout')) {
         errorMsg = '⏱️ Request timed out - API is slow. Try again in a moment.';
-      } else if (error.message.includes('404')) {
+      } else if (error.response?.status === 404) {
         errorMsg = '❌ Image URL invalid';
-      } else if (error.message.includes('500')) {
+      } else if (error.response?.status === 500) {
         errorMsg = '⚠️ AI service error - try again later';
       }
       
