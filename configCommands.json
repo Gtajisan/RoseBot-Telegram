@@ -1,0 +1,46 @@
+{
+  "commands": {
+    "help": {
+      "enabled": true,
+      "adminOnly": false,
+      "description": "Show all available commands"
+    },
+    "info": {
+      "enabled": true,
+      "adminOnly": false,
+      "description": "Get bot information"
+    },
+    "ping": {
+      "enabled": true,
+      "adminOnly": false,
+      "description": "Check bot latency"
+    },
+    "owner": {
+      "enabled": true,
+      "adminOnly": false,
+      "description": "Show bot owner"
+    },
+    "stats": {
+      "enabled": true,
+      "adminOnly": true,
+      "description": "Show bot statistics"
+    },
+    "start": {
+      "enabled": true,
+      "adminOnly": false,
+      "description": "Start using the bot"
+    },
+    "settings": {
+      "enabled": true,
+      "adminOnly": true,
+      "description": "Bot settings"
+    }
+  },
+  "owners": [
+    "YOUR_USER_ID_HERE"
+  ],
+  "admins": [],
+  "groupOnly": ["stats", "settings"],
+  "pmOnly": [],
+  "disabled": []
+}

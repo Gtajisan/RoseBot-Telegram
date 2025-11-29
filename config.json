@@ -1,0 +1,39 @@
+{
+  "bot": {
+    "name": "Rose Bot",
+    "prefix": "/",
+    "version": "2.0.0"
+  },
+  "telegram": {
+    "token": "YOUR_BOT_TOKEN_HERE",
+    "polling": {
+      "timeout": 30,
+      "allowed_updates": ["message", "callback_query"]
+    }
+  },
+  "database": {
+    "type": "sqlite",
+    "path": "./database/rose.db",
+    "autoCreate": true
+  },
+  "api": {
+    "port": 3000,
+    "enabled": true
+  },
+  "logging": {
+    "level": "info",
+    "showTimestamp": true,
+    "file": "./logs/bot.log"
+  },
+  "features": {
+    "antiSpam": true,
+    "welcomeMessage": true,
+    "multiLanguage": true,
+    "adminManagement": true,
+    "statistics": true
+  },
+  "cooldown": {
+    "default": 3000,
+    "perUser": true
+  }
+}
