@@ -1,0 +1,150 @@
+2025-11-29T08:52:56.396522763Z ℹ️ [2025-11-29T08:52:56.395Z] [INFO] ✅ Command loaded: /appstore 
+2025-11-29T08:52:56.396536524Z ℹ️ [2025-11-29T08:52:56.395Z] [INFO] ✅ Command loaded: /autosetname 
+2025-11-29T08:52:56.396539535Z ℹ️ [2025-11-29T08:52:56.395Z] [INFO] ✅ Command loaded: /avatar 
+2025-11-29T08:52:56.396541935Z ℹ️ [2025-11-29T08:52:56.395Z] [INFO] ✅ Command loaded: /backupdata 
+2025-11-29T08:52:56.396544285Z ℹ️ [2025-11-29T08:52:56.396Z] [INFO] ✅ Command loaded: /badwords 
+2025-11-29T08:52:56.396622401Z ℹ️ [2025-11-29T08:52:56.396Z] [INFO] ✅ Command loaded: /balance 
+2025-11-29T08:52:56.396978607Z ℹ️ [2025-11-29T08:52:56.396Z] [INFO] ✅ Command loaded: /ban 
+2025-11-29T08:52:56.397252897Z ℹ️ [2025-11-29T08:52:56.397Z] [INFO] ✅ Command loaded: /busy 
+2025-11-29T08:52:56.484089913Z ℹ️ [2025-11-29T08:52:56.483Z] [INFO] ✅ Command loaded: /calc 
+2025-11-29T08:52:56.485215836Z ℹ️ [2025-11-29T08:52:56.484Z] [INFO] ✅ Command loaded: /callad 
+2025-11-29T08:52:56.485227367Z ℹ️ [2025-11-29T08:52:56.485Z] [INFO] ✅ Command loaded: /chatinfo 
+2025-11-29T08:52:56.485425821Z ℹ️ [2025-11-29T08:52:56.485Z] [INFO] ✅ Command loaded: /count 
+2025-11-29T08:52:56.485735524Z ℹ️ [2025-11-29T08:52:56.485Z] [INFO] ✅ Command loaded: /customrankcard 
+2025-11-29T08:52:56.486035686Z ℹ️ [2025-11-29T08:52:56.485Z] [INFO] ✅ Command loaded: /daily 
+2025-11-29T08:52:56.48635765Z ℹ️ [2025-11-29T08:52:56.486Z] [INFO] ✅ Command loaded: /delete 
+2025-11-29T08:52:56.486546114Z ℹ️ [2025-11-29T08:52:56.486Z] [INFO] ✅ Command loaded: /demo 
+2025-11-29T08:52:56.48772545Z ❌ [2025-11-29T08:52:56.486Z] [ERROR] Failed to load command demote.js: Missing catch or finally after try 
+2025-11-29T08:52:56.487739041Z ℹ️ [2025-11-29T08:52:56.487Z] [INFO] ✅ Command loaded: /dev 
+2025-11-29T08:52:56.487742161Z ℹ️ [2025-11-29T08:52:56.487Z] [INFO] ✅ Command loaded: /dhbc 
+2025-11-29T08:52:56.487807356Z ℹ️ [2025-11-29T08:52:56.487Z] [INFO] ✅ Command loaded: /dwarn 
+2025-11-29T08:52:56.885091058Z ℹ️ [2025-11-29T08:52:56.884Z] [INFO] ✅ Command loaded: /edit 
+2025-11-29T08:52:56.88539399Z ℹ️ [2025-11-29T08:52:56.885Z] [INFO] ✅ Command loaded: /emojimean 
+2025-11-29T08:52:56.88579376Z ℹ️ [2025-11-29T08:52:56.885Z] [INFO] ✅ Command loaded: /emojimix 
+2025-11-29T08:52:56.886162867Z ℹ️ [2025-11-29T08:52:56.886Z] [INFO] ✅ Command loaded: /eval 
+2025-11-29T08:52:56.88661765Z ❌ [2025-11-29T08:52:56.886Z] [ERROR] Failed to load command fact.js: Missing catch or finally after try 
+2025-11-29T08:52:56.886905291Z ℹ️ [2025-11-29T08:52:56.886Z] [INFO] ✅ Command loaded: /file 
+2025-11-29T08:52:56.887275278Z ❌ [2025-11-29T08:52:56.887Z] [ERROR] Failed to load command filter.js: Missing catch or finally after try 
+2025-11-29T08:52:56.887604393Z ❌ [2025-11-29T08:52:56.887Z] [ERROR] Failed to load command filters.js: Missing catch or finally after try 
+2025-11-29T08:52:56.890552249Z ℹ️ [2025-11-29T08:52:56.890Z] [INFO] ✅ Command loaded: /filteruser 
+2025-11-29T08:52:56.890665397Z ℹ️ [2025-11-29T08:52:56.890Z] [INFO] ✅ Command loaded: /fork 
+2025-11-29T08:52:56.891530041Z ℹ️ [2025-11-29T08:52:56.890Z] [INFO] ✅ Command loaded: /fak 
+2025-11-29T08:52:56.891538871Z ℹ️ [2025-11-29T08:52:56.891Z] [INFO] ✅ Command loaded: /getfbstate 
+2025-11-29T08:52:56.891542792Z ❌ [2025-11-29T08:52:56.891Z] [ERROR] Failed to load command goodbye.js: Missing catch or finally after try 
+2025-11-29T08:52:56.984760107Z ℹ️ [2025-11-29T08:52:56.984Z] [INFO] ✅ Command loaded: /gpt 
+2025-11-29T08:52:56.984775488Z ℹ️ [2025-11-29T08:52:56.984Z] [INFO] ✅ Command loaded: /grouptag 
+2025-11-29T08:52:56.985009805Z ℹ️ [2025-11-29T08:52:56.984Z] [INFO] ✅ Command loaded: /guessnumber 
+2025-11-29T08:52:56.985336429Z ℹ️ [2025-11-29T08:52:56.985Z] [INFO] ✅ Command loaded: /help 
+2025-11-29T08:52:56.985641851Z ℹ️ [2025-11-29T08:52:56.985Z] [INFO] ✅ Command loaded: /hubble 
+2025-11-29T08:52:56.986041221Z ❌ [2025-11-29T08:52:56.985Z] [ERROR] Failed to load command hug.js: Missing catch or finally after try 
+2025-11-29T08:52:56.986325291Z ℹ️ [2025-11-29T08:52:56.986Z] [INFO] ✅ Command loaded: /id 
+2025-11-29T08:52:56.986624693Z ℹ️ [2025-11-29T08:52:56.986Z] [INFO] ✅ Command loaded: /ignoreonlyad 
+2025-11-29T08:52:56.986930266Z ℹ️ [2025-11-29T08:52:56.986Z] [INFO] ✅ Command loaded: /ignoreonlyadbox 
+2025-11-29T08:52:56.987211487Z ℹ️ [2025-11-29T08:52:56.987Z] [INFO] ✅ Command loaded: /imgbb 
+2025-11-29T08:52:56.987895267Z ℹ️ [2025-11-29T08:52:56.987Z] [INFO] ✅ Command loaded: /info 
+2025-11-29T08:52:56.987905338Z ❌ [2025-11-29T08:52:56.987Z] [ERROR] Failed to load command joke.js: Missing catch or finally after try 
+2025-11-29T08:52:56.988193989Z ℹ️ [2025-11-29T08:52:56.988Z] [INFO] ✅ Command loaded: /jsontomongodb 
+2025-11-29T08:52:56.988496811Z ℹ️ [2025-11-29T08:52:56.988Z] [INFO] ✅ Command loaded: /jsontosqlite 
+2025-11-29T08:52:56.988730568Z ℹ️ [2025-11-29T08:52:56.988Z] [INFO] ✅ Command loaded: /kick 
+2025-11-29T08:52:56.989052692Z ❌ [2025-11-29T08:52:56.988Z] [ERROR] Failed to load command kickme.js: Missing catch or finally after try 
+2025-11-29T08:52:56.98929957Z ❌ [2025-11-29T08:52:56.989Z] [ERROR] Failed to load command kiss.js: Missing catch or finally after try 
+2025-11-29T08:52:56.989789866Z ℹ️ [2025-11-29T08:52:56.989Z] [INFO] ✅ Command loaded: /loadconfig 
+2025-11-29T08:52:56.989798666Z ❌ [2025-11-29T08:52:56.989Z] [ERROR] Failed to load command lock.js: Missing catch or finally after try 
+2025-11-29T08:52:56.990030874Z ❌ [2025-11-29T08:52:56.989Z] [ERROR] Failed to load command locks.js: Missing catch or finally after try 
+2025-11-29T08:52:56.990264291Z ℹ️ [2025-11-29T08:52:56.990Z] [INFO] ✅ Command loaded: /logo 
+2025-11-29T08:52:56.990514709Z ❌ [2025-11-29T08:52:56.990Z] [ERROR] Failed to load command logs.js: Missing catch or finally after try 
+2025-11-29T08:52:56.9909394Z ❌ [2025-11-29T08:52:56.990Z] [ERROR] Failed to load command manga.js: Missing catch or finally after try 
+2025-11-29T08:52:56.990982953Z ℹ️ [2025-11-29T08:52:56.990Z] [INFO] ✅ Command loaded: /meme 
+2025-11-29T08:52:56.991220981Z ❌ [2025-11-29T08:52:56.991Z] [ERROR] Failed to load command menu.js: Missing catch or finally after try 
+2025-11-29T08:52:56.991433026Z ℹ️ [2025-11-29T08:52:56.991Z] [INFO] ✅ Command loaded: /moon 
+2025-11-29T08:52:56.991669574Z ℹ️ [2025-11-29T08:52:56.991Z] [INFO] ✅ Command loaded: /mute 
+2025-11-29T08:52:56.991956935Z ℹ️ [2025-11-29T08:52:56.991Z] [INFO] ✅ Command loaded: /commandName 
+2025-11-29T08:52:56.992240416Z ℹ️ [2025-11-29T08:52:56.992Z] [INFO] ✅ Command loaded: /nijix 
+2025-11-29T08:52:56.9924372Z ℹ️ [2025-11-29T08:52:56.992Z] [INFO] ✅ Command loaded: /note 
+2025-11-29T08:52:56.992774335Z ❌ [2025-11-29T08:52:56.992Z] [ERROR] Failed to load command notes.js: Missing catch or finally after try 
+2025-11-29T08:52:56.992956518Z ℹ️ [2025-11-29T08:52:56.992Z] [INFO] ✅ Command loaded: /notification 
+2025-11-29T08:52:56.993217208Z ℹ️ [2025-11-29T08:52:56.993Z] [INFO] ✅ Command loaded: /numlookup 
+2025-11-29T08:52:56.993585615Z ❌ [2025-11-29T08:52:56.993Z] [ERROR] Failed to load command owner.js: Missing catch or finally after try 
+2025-11-29T08:52:56.99392676Z ℹ️ [2025-11-29T08:52:56.993Z] [INFO] ✅ Command loaded: /pfp 
+2025-11-29T08:52:56.99515812Z ℹ️ [2025-11-29T08:52:56.994Z] [INFO] ✅ Command loaded: /pi 
+2025-11-29T08:52:56.995181382Z ❌ [2025-11-29T08:52:56.994Z] [ERROR] Failed to load command pin.js: Missing catch or finally after try 
+2025-11-29T08:52:56.995184252Z ℹ️ [2025-11-29T08:52:56.994Z] [INFO] ✅ Command loaded: /ping 
+2025-11-29T08:52:56.995186712Z ℹ️ [2025-11-29T08:52:56.995Z] [INFO] ✅ Command loaded: /prefix 
+2025-11-29T08:52:56.99543356Z ℹ️ [2025-11-29T08:52:56.995Z] [INFO] ✅ Command loaded: /premium 
+2025-11-29T08:52:57.084563345Z ❌ [2025-11-29T08:52:57.084Z] [ERROR] Failed to load command promote.js: Missing catch or finally after try 
+2025-11-29T08:52:57.084921831Z ❌ [2025-11-29T08:52:57.084Z] [ERROR] Failed to load command purge.js: Missing catch or finally after try 
+2025-11-29T08:52:57.085253055Z ❌ [2025-11-29T08:52:57.085Z] [ERROR] Failed to load command quote.js: Missing catch or finally after try 
+2025-11-29T08:52:57.08558738Z ℹ️ [2025-11-29T08:52:57.085Z] [INFO] ✅ Command loaded: /rank 
+2025-11-29T08:52:57.085847709Z ℹ️ [2025-11-29T08:52:57.085Z] [INFO] ✅ Command loaded: /rankup 
+2025-11-29T08:52:57.086108618Z ℹ️ [2025-11-29T08:52:57.086Z] [INFO] ✅ Command loaded: /refresh 
+2025-11-29T08:52:57.086387549Z ℹ️ [2025-11-29T08:52:57.086Z] [INFO] ✅ Command loaded: /resetgoodbye 
+2025-11-29T08:52:57.086803299Z ❌ [2025-11-29T08:52:57.086Z] [ERROR] Failed to load command resetwarn.js: Missing catch or finally after try 
+2025-11-29T08:52:57.087074959Z ℹ️ [2025-11-29T08:52:57.086Z] [INFO] ✅ Command loaded: /resetwelcome 
+2025-11-29T08:52:57.087267453Z ℹ️ [2025-11-29T08:52:57.087Z] [INFO] ✅ Command loaded: /restart 
+2025-11-29T08:52:57.087588457Z ❌ [2025-11-29T08:52:57.087Z] [ERROR] Failed to load command rmwarn.js: Missing catch or finally after try 
+2025-11-29T08:52:57.08789741Z ℹ️ [2025-11-29T08:52:57.087Z] [INFO] ✅ Command loaded: /rules 
+2025-11-29T08:52:57.088164519Z ℹ️ [2025-11-29T08:52:57.088Z] [INFO] ✅ Command loaded: /savetext 
+2025-11-29T08:52:57.088422078Z ℹ️ [2025-11-29T08:52:57.088Z] [INFO] ✅ Command loaded: /say 
+2025-11-29T08:52:57.088692848Z ℹ️ [2025-11-29T08:52:57.088Z] [INFO] ✅ Command loaded: /sendnoti 
+2025-11-29T08:52:57.088919495Z ℹ️ [2025-11-29T08:52:57.088Z] [INFO] ✅ Command loaded: /setalias 
+2025-11-29T08:52:57.089143111Z ℹ️ [2025-11-29T08:52:57.089Z] [INFO] ✅ Command loaded: /setavt 
+2025-11-29T08:52:57.089759617Z ❌ [2025-11-29T08:52:57.089Z] [ERROR] Failed to load command setgoodbye.js: Missing catch or finally after try 
+2025-11-29T08:52:57.089995834Z ℹ️ [2025-11-29T08:52:57.089Z] [INFO] ✅ Command loaded: /setlang 
+2025-11-29T08:52:57.090292276Z ℹ️ [2025-11-29T08:52:57.090Z] [INFO] ✅ Command loaded: /setleave 
+2025-11-29T08:52:57.090590318Z ℹ️ [2025-11-29T08:52:57.090Z] [INFO] ✅ Command loaded: /setname 
+2025-11-29T08:52:57.090851577Z ℹ️ [2025-11-29T08:52:57.090Z] [INFO] ✅ Command loaded: /setprefix 
+2025-11-29T08:52:57.091132547Z ℹ️ [2025-11-29T08:52:57.091Z] [INFO] ✅ Command loaded: /setrankup 
+2025-11-29T08:52:57.091360824Z ℹ️ [2025-11-29T08:52:57.091Z] [INFO] ✅ Command loaded: /setrole 
+2025-11-29T08:52:57.091699209Z ℹ️ [2025-11-29T08:52:57.091Z] [INFO] ✅ Command loaded: /setwelcome 
+2025-11-29T08:52:57.091933686Z ℹ️ [2025-11-29T08:52:57.091Z] [INFO] ✅ Command loaded: /shell 
+2025-11-29T08:52:57.092216367Z ℹ️ [2025-11-29T08:52:57.092Z] [INFO] ✅ Command loaded: /ship 
+2025-11-29T08:52:57.092481236Z ℹ️ [2025-11-29T08:52:57.092Z] [INFO] ✅ Command loaded: /shortcut 
+2025-11-29T08:52:57.092751696Z ℹ️ [2025-11-29T08:52:57.092Z] [INFO] ✅ Command loaded: /sing 
+2025-11-29T08:52:57.092991794Z ℹ️ [2025-11-29T08:52:57.092Z] [INFO] ✅ Command loaded: /slap 
+2025-11-29T08:52:57.093257773Z ℹ️ [2025-11-29T08:52:57.093Z] [INFO] ✅ Command loaded: /sorthelp 
+2025-11-29T08:52:57.093522773Z ℹ️ [2025-11-29T08:52:57.093Z] [INFO] ✅ Command loaded: /spamban 
+2025-11-29T08:52:57.093805054Z ℹ️ [2025-11-29T08:52:57.093Z] [INFO] ✅ Command loaded: /start 
+2025-11-29T08:52:57.094041121Z ℹ️ [2025-11-29T08:52:57.093Z] [INFO] ✅ Command loaded: /stats 
+2025-11-29T08:52:57.094316061Z ℹ️ [2025-11-29T08:52:57.094Z] [INFO] ✅ Command loaded: /stop 
+2025-11-29T08:52:57.094591321Z ℹ️ [2025-11-29T08:52:57.094Z] [INFO] ✅ Command loaded: /stopall 
+2025-11-29T08:52:57.094874272Z ℹ️ [2025-11-29T08:52:57.094Z] [INFO] ✅ Command loaded: /tempban 
+2025-11-29T08:52:57.09511574Z ℹ️ [2025-11-29T08:52:57.095Z] [INFO] ✅ Command loaded: /texttoimage 
+2025-11-29T08:52:57.09538715Z ℹ️ [2025-11-29T08:52:57.095Z] [INFO] ✅ Command loaded: /thread 
+2025-11-29T08:52:57.095639918Z ℹ️ [2025-11-29T08:52:57.095Z] [INFO] ✅ Command loaded: /tid 
+2025-11-29T08:52:57.095912518Z ℹ️ [2025-11-29T08:52:57.095Z] [INFO] ✅ Command loaded: /translate 
+2025-11-29T08:52:57.096145145Z ℹ️ [2025-11-29T08:52:57.096Z] [INFO] ✅ Command loaded: /uid 
+2025-11-29T08:52:57.096408474Z ℹ️ [2025-11-29T08:52:57.096Z] [INFO] ✅ Command loaded: /unban 
+2025-11-29T08:52:57.184378974Z ℹ️ [2025-11-29T08:52:57.184Z] [INFO] ✅ Command loaded: /unlock 
+2025-11-29T08:52:57.184965417Z ℹ️ [2025-11-29T08:52:57.184Z] [INFO] ✅ Command loaded: /unmute 
+2025-11-29T08:52:57.185048283Z ℹ️ [2025-11-29T08:52:57.184Z] [INFO] ✅ Command loaded: /unpin 
+2025-11-29T08:52:57.185422351Z ℹ️ [2025-11-29T08:52:57.185Z] [INFO] ✅ Command loaded: /unsend 
+2025-11-29T08:52:57.185756655Z ℹ️ [2025-11-29T08:52:57.185Z] [INFO] ✅ Command loaded: /uptime 
+2025-11-29T08:52:57.186244761Z ℹ️ [2025-11-29T08:52:57.185Z] [INFO] ✅ Command loaded: /update 
+2025-11-29T08:52:57.186386812Z ℹ️ [2025-11-29T08:52:57.186Z] [INFO] ✅ Command loaded: /uptime 
+2025-11-29T08:52:57.186722496Z ℹ️ [2025-11-29T08:52:57.186Z] [INFO] ✅ Command loaded: /user 
+2025-11-29T08:52:57.1870449Z ℹ️ [2025-11-29T08:52:57.186Z] [INFO] ✅ Command loaded: /userinfo 
+2025-11-29T08:52:57.187327921Z ℹ️ [2025-11-29T08:52:57.187Z] [INFO] ✅ Command loaded: /users 
+2025-11-29T08:52:57.187605001Z ℹ️ [2025-11-29T08:52:57.187Z] [INFO] ✅ Command loaded: /vip 
+2025-11-29T08:52:57.187980618Z ℹ️ [2025-11-29T08:52:57.187Z] [INFO] ✅ Command loaded: /waifu 
+2025-11-29T08:52:57.188325014Z ℹ️ [2025-11-29T08:52:57.188Z] [INFO] ✅ Command loaded: /warn 
+2025-11-29T08:52:57.188629336Z ℹ️ [2025-11-29T08:52:57.188Z] [INFO] ✅ Command loaded: /warnlimit 
+2025-11-29T08:52:57.188927558Z ℹ️ [2025-11-29T08:52:57.188Z] [INFO] ✅ Command loaded: /warnmode 
+2025-11-29T08:52:57.189191438Z ℹ️ [2025-11-29T08:52:57.189Z] [INFO] ✅ Command loaded: /warns 
+2025-11-29T08:52:57.189580416Z ℹ️ [2025-11-29T08:52:57.189Z] [INFO] ✅ Command loaded: /warntime 
+2025-11-29T08:52:57.189934162Z ℹ️ [2025-11-29T08:52:57.189Z] [INFO] ✅ Command loaded: /weather 
+2025-11-29T08:52:57.190188831Z ℹ️ [2025-11-29T08:52:57.190Z] [INFO] ✅ Command loaded: /welcome 
+2025-11-29T08:52:57.190446059Z ℹ️ [2025-11-29T08:52:57.190Z] [INFO] ✅ Command loaded: /whois 
+2025-11-29T08:52:57.190757742Z ℹ️ [2025-11-29T08:52:57.190Z] [INFO] ✅ Command loaded: /whitelist 
+2025-11-29T08:52:57.191021842Z ℹ️ [2025-11-29T08:52:57.190Z] [INFO] ✅ Command loaded: /ytb 
+2025-11-29T08:52:57.191091967Z ℹ️ [2025-11-29T08:52:57.191Z] [INFO] 📋 Total commands loaded: 119 
+2025-11-29T08:52:57.191685241Z ℹ️ [2025-11-29T08:52:57.191Z] [INFO] ✅ Event loaded: group_join 
+2025-11-29T08:52:57.192041847Z ℹ️ [2025-11-29T08:52:57.191Z] [INFO] ✅ Event loaded: message 
+2025-11-29T08:52:57.192051897Z ℹ️ [2025-11-29T08:52:57.192Z] [INFO] 📡 Total events: 2 
+2025-11-29T08:52:57.198788282Z ℹ️ [2025-11-29T08:52:57.198Z] [INFO] 📊 Dashboard API on port 3000 
+2025-11-29T08:53:04.441967566Z ==> Your service is live 🎉
+2025-11-29T08:53:04.628124139Z ==> 
+2025-11-29T08:53:04.812490472Z ==> ///////////////////////////////////////////////////////////
+2025-11-29T08:53:04.999416056Z ==> 
+2025-11-29T08:53:05.18251789Z ==> Available at your primary URL https://rosebot-telegram.onrender.com
+2025-11-29T08:53:05.364920343Z ==> 
+2025-11-29T08:53:05.550603887Z ==> ///////////////////////////////////////////////////////////
