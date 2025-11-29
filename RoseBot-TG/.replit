@@ -1,8 +1,0 @@
-run = "cd RoseBot-TG && mvn clean compile exec:java -Dexec.mainClass='com.rosebot.RoseBotMain'"
-language = "java"
-
-[languages.java]
-pattern = "**/*.java"
-
-[languages.java.languageServer]
-start = "jdtls"

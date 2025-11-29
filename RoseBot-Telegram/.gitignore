@@ -1,0 +1,16 @@
+node_modules/
+package-lock.json
+.env
+.env.local
+.DS_Store
+Thumbs.db
+*.log
+logs/
+database/*.db
+.vscode/settings.json
+.idea/
+dist/
+build/
+.replit
+account.txt
+*.backup
