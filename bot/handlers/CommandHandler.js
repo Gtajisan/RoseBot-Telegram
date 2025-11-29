@@ -52,6 +52,10 @@ class CommandHandler {
     return this.commands.get(name);
   }
 
+  getAll() {
+    return Array.from(this.commands.values());
+  }
+
   async handle(ctx, commandName, args, goat) {
     const cmd = this.get(commandName);
     if (!cmd) return false;
