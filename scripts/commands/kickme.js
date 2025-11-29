@@ -6,10 +6,9 @@ module.exports = {
 
   async execute(ctx, args, db, config, goat) {
     try {
-    await goat.reply(ctx, `👋 Goodbye ${ctx.from.first_name}!`);
-  }
-
+      await goat.reply(ctx, `👋 Goodbye ${ctx.from.first_name}!`);
     } catch (error) {
       await goat.reply(ctx, `❌ Error: ${error.message}`);
     }
+  }
 };
