@@ -1,9 +1,8 @@
 const axios = require('axios');
-const { OpenAI } = require('openai');
 
 module.exports = {
   name: 'edit',
-  description: 'Generate AI images using DALL-E',
+  description: 'Edit images using Nano-Banana AI',
   author: 'Gtajisan',
   adminOnly: false,
 
@@ -11,12 +10,13 @@ module.exports = {
     const prompt = args.join(' ');
     const repliedMsg = ctx.message.reply_to_message;
 
-    // Validate reply to image
+    // Validate reply
     if (!repliedMsg) {
       await goat.reply(ctx, '❌ Reply to an image to edit it\n\n📝 Usage: /edit <prompt>', { parse_mode: 'Markdown' });
       return;
     }
 
+    // Check if reply is image
     if (!repliedMsg.photo) {
       await goat.reply(ctx, '❌ Reply to an image', { parse_mode: 'Markdown' });
       return;
@@ -29,65 +29,53 @@ module.exports = {
     }
 
     try {
+      // Get image URL
+      const photoId = repliedMsg.photo[repliedMsg.photo.length - 1].file_id;
+      const fileLink = await goat.getInstance().telegram.getFileLink(photoId);
+      
       // Show processing status
-      const processingMsg = await goat.reply(ctx, '⏳ Generating image with DALL-E...', { parse_mode: 'Markdown' });
+      await goat.reply(ctx, '⏳ Processing image with Nano-Banana AI...', { parse_mode: 'Markdown' });
 
-      // Check if OpenAI API key is set
-      const apiKey = process.env.OPENAI_API_KEY;
-      if (!apiKey) {
-        await goat.reply(ctx, '❌ OpenAI API key not configured', { parse_mode: 'Markdown' });
-        return;
-      }
-
-      // Initialize OpenAI client
-      const client = new OpenAI({ apiKey });
-
-      // Generate image using DALL-E 3
-      const imageResponse = await client.images.generate({
-        model: 'dall-e-3',
-        prompt: prompt,
-        n: 1,
-        size: '1024x1024',
-        quality: 'standard',
-        response_format: 'url'
+      // Call Nano-Banana API
+      const apiUrl = `https://tawsif.is-a.dev/gemini/nano-banana?prompt=${encodeURIComponent(prompt)}&url=${encodeURIComponent(fileLink)}`;
+      
+      const response = await axios.get(apiUrl, { 
+        timeout: 60000,
+        headers: {
+          'User-Agent': 'RoseBot-Telegram'
+        }
       });
 
-      if (!imageResponse.data || !imageResponse.data[0] || !imageResponse.data[0].url) {
-        await goat.reply(ctx, '❌ Failed to generate image', { parse_mode: 'Markdown' });
+      if (!response.data || !response.data.imageUrl) {
+        await goat.reply(ctx, '❌ Failed to process image', { parse_mode: 'Markdown' });
         return;
       }
 
-      // Get the generated image URL
-      const generatedImageUrl = imageResponse.data[0].url;
-
-      // Download the image
-      const imageBuffer = await axios.get(generatedImageUrl, {
+      // Download and send processed image
+      const imageBuffer = await axios.get(response.data.imageUrl, {
         responseType: 'arraybuffer',
         timeout: 30000
       });
 
-      // Send the generated image to Telegram
       await goat.getInstance().telegram.sendPhoto(
         ctx.chat.id,
         { source: Buffer.from(imageBuffer.data) },
         {
-          caption: `✅ Image generated successfully\n\n🎨 *Prompt:* ${prompt}\n📸 Powered by DALL-E 3`,
-          reply_to_message_id: ctx.message.message_id,
-          parse_mode: 'Markdown'
+          caption: `✅ Image edited successfully\n\n🎨 Prompt: ${prompt}\n📸 Powered by Nano-Banana AI`,
+          reply_to_message_id: ctx.message.message_id
         }
       );
 
     } catch (error) {
       console.error('Edit command error:', error.message);
       
-      // Provide helpful error messages
-      let errorMsg = '❌ Image generation failed';
-      if (error.message.includes('400')) {
-        errorMsg = '❌ Invalid prompt - try a different description';
-      } else if (error.message.includes('429')) {
-        errorMsg = '⏱️ Rate limited - please try again in a moment';
-      } else if (error.message.includes('timeout')) {
-        errorMsg = '⏱️ Request timed out - try again';
+      let errorMsg = '❌ Image processing failed';
+      if (error.code === 'ECONNABORTED' || error.message.includes('timeout')) {
+        errorMsg = '⏱️ Request timed out - API is slow. Try again in a moment.';
+      } else if (error.message.includes('404')) {
+        errorMsg = '❌ Image URL invalid';
+      } else if (error.message.includes('500')) {
+        errorMsg = '⚠️ AI service error - try again later';
       }
       
       await goat.reply(ctx, errorMsg, { parse_mode: 'Markdown' });
