@@ -1,6 +1,6 @@
 module.exports = {
   name: 'ping',
-  description: 'Check latency',
+  description: 'Check bot latency',
   author: 'Gtajisan',
   adminOnly: false,
 
@@ -8,6 +8,6 @@ module.exports = {
     const start = Date.now();
     const msg = await goat.reply(ctx, '🏓 Pong!');
     const latency = Date.now() - start;
-    await goat.editMessage(ctx.chat.id, msg.message_id, `🏓 Pong! ${latency}ms`);
+    await goat.getInstance().telegram.editMessageText(ctx.chat.id, msg.message_id, null, `🏓 *Pong!*\n⏱️ Latency: \`${latency}ms\``, { parse_mode: 'Markdown' }).catch(() => {});
   }
 };
