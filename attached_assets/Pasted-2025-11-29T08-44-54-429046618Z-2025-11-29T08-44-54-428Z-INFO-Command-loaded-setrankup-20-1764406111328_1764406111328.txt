@@ -1,0 +1,50 @@
+2025-11-29T08:44:54.429046618Z ℹ️ [2025-11-29T08:44:54.428Z] [INFO] ✅ Command loaded: /setrankup 
+2025-11-29T08:44:54.429951015Z ℹ️ [2025-11-29T08:44:54.429Z] [INFO] ✅ Command loaded: /setrole 
+2025-11-29T08:44:54.430980397Z ❌ [2025-11-29T08:44:54.430Z] [ERROR] Failed to load command setwelcome.js: Missing catch or finally after try 
+2025-11-29T08:44:54.431879673Z ℹ️ [2025-11-29T08:44:54.431Z] [INFO] ✅ Command loaded: /shell 
+2025-11-29T08:44:54.432829352Z ℹ️ [2025-11-29T08:44:54.432Z] [INFO] ✅ Command loaded: /ship 
+2025-11-29T08:44:54.433795432Z ℹ️ [2025-11-29T08:44:54.433Z] [INFO] ✅ Command loaded: /shortcut 
+2025-11-29T08:44:54.435144221Z ℹ️ [2025-11-29T08:44:54.434Z] [INFO] ✅ Command loaded: /sing 
+2025-11-29T08:44:54.436266238Z ❌ [2025-11-29T08:44:54.435Z] [ERROR] Failed to load command slap.js: Missing catch or finally after try 
+2025-11-29T08:44:54.436824787Z ℹ️ [2025-11-29T08:44:54.436Z] [INFO] ✅ Command loaded: /sorthelp 
+2025-11-29T08:44:54.437719363Z ℹ️ [2025-11-29T08:44:54.437Z] [INFO] ✅ Command loaded: /spamban 
+2025-11-29T08:44:54.438710684Z ℹ️ [2025-11-29T08:44:54.438Z] [INFO] ✅ Command loaded: /start 
+2025-11-29T08:44:54.440524517Z ❌ [2025-11-29T08:44:54.440Z] [ERROR] Failed to load command stats.js: Missing catch or finally after try 
+2025-11-29T08:44:54.441597821Z ❌ [2025-11-29T08:44:54.441Z] [ERROR] Failed to load command stop.js: Missing catch or finally after try 
+2025-11-29T08:44:54.442503148Z ℹ️ [2025-11-29T08:44:54.442Z] [INFO] ✅ Command loaded: /stopall 
+2025-11-29T08:44:54.443667948Z ℹ️ [2025-11-29T08:44:54.443Z] [INFO] ✅ Command loaded: /tempban 
+2025-11-29T08:44:54.444377794Z ℹ️ [2025-11-29T08:44:54.444Z] [INFO] ✅ Command loaded: /texttoimage 
+2025-11-29T08:44:54.445413787Z ℹ️ [2025-11-29T08:44:54.445Z] [INFO] ✅ Command loaded: /thread 
+2025-11-29T08:44:54.446410988Z ℹ️ [2025-11-29T08:44:54.446Z] [INFO] ✅ Command loaded: /tid 
+2025-11-29T08:44:54.447305544Z ℹ️ [2025-11-29T08:44:54.447Z] [INFO] ✅ Command loaded: /translate 
+2025-11-29T08:44:54.44800628Z ℹ️ [2025-11-29T08:44:54.447Z] [INFO] ✅ Command loaded: /uid 
+2025-11-29T08:44:54.448929487Z ℹ️ [2025-11-29T08:44:54.448Z] [INFO] ✅ Command loaded: /unban 
+2025-11-29T08:44:54.44976409Z ❌ [2025-11-29T08:44:54.449Z] [ERROR] Failed to load command unlock.js: Missing catch or finally after try 
+2025-11-29T08:44:54.450695148Z ❌ [2025-11-29T08:44:54.450Z] [ERROR] Failed to load command unmute.js: Missing catch or finally after try 
+2025-11-29T08:44:54.451566332Z ❌ [2025-11-29T08:44:54.451Z] [ERROR] Failed to load command unpin.js: Missing catch or finally after try 
+2025-11-29T08:44:54.452719011Z ℹ️ [2025-11-29T08:44:54.452Z] [INFO] ✅ Command loaded: /unsend 
+2025-11-29T08:44:54.453905512Z ℹ️ [2025-11-29T08:44:54.453Z] [INFO] ✅ Command loaded: /uptime 
+2025-11-29T08:44:54.455010969Z ℹ️ [2025-11-29T08:44:54.454Z] [INFO] ✅ Command loaded: /update 
+2025-11-29T08:44:54.455851462Z ❌ [2025-11-29T08:44:54.455Z] [ERROR] Failed to load command uptime.js: Missing catch or finally after try 
+2025-11-29T08:44:54.456864174Z ℹ️ [2025-11-29T08:44:54.456Z] [INFO] ✅ Command loaded: /user 
+2025-11-29T08:44:54.524712922Z ℹ️ [2025-11-29T08:44:54.524Z] [INFO] ✅ Command loaded: /userinfo 
+2025-11-29T08:44:54.52584471Z ❌ [2025-11-29T08:44:54.525Z] [ERROR] Failed to load command users.js: Missing catch or finally after try 
+2025-11-29T08:44:54.52683383Z ℹ️ [2025-11-29T08:44:54.526Z] [INFO] ✅ Command loaded: /vip 
+2025-11-29T08:44:54.527764088Z ℹ️ [2025-11-29T08:44:54.527Z] [INFO] ✅ Command loaded: /waifu 
+2025-11-29T08:44:54.528813722Z ℹ️ [2025-11-29T08:44:54.528Z] [INFO] ✅ Command loaded: /warn 
+2025-11-29T08:44:54.529767521Z ℹ️ [2025-11-29T08:44:54.529Z] [INFO] ✅ Command loaded: /warnlimit 
+2025-11-29T08:44:54.53073093Z ℹ️ [2025-11-29T08:44:54.530Z] [INFO] ✅ Command loaded: /warnmode 
+2025-11-29T08:44:54.532168614Z ❌ [2025-11-29T08:44:54.531Z] [ERROR] Failed to load command warns.js: Missing catch or finally after try 
+2025-11-29T08:44:54.532922333Z ℹ️ [2025-11-29T08:44:54.532Z] [INFO] ✅ Command loaded: /warntime 
+2025-11-29T08:44:54.534110963Z ℹ️ [2025-11-29T08:44:54.533Z] [INFO] ✅ Command loaded: /weather 
+2025-11-29T08:44:54.53501119Z ❌ [2025-11-29T08:44:54.534Z] [ERROR] Failed to load command welcome.js: Missing catch or finally after try 
+2025-11-29T08:44:54.535909536Z ℹ️ [2025-11-29T08:44:54.535Z] [INFO] ✅ Command loaded: /whois 
+2025-11-29T08:44:54.536832303Z ℹ️ [2025-11-29T08:44:54.536Z] [INFO] ✅ Command loaded: /whitelist 
+2025-11-29T08:44:54.538418384Z ℹ️ [2025-11-29T08:44:54.537Z] [INFO] ✅ Command loaded: /ytb 
+2025-11-29T08:44:54.53852379Z ℹ️ [2025-11-29T08:44:54.538Z] [INFO] 📋 Total commands loaded: 109 
+2025-11-29T08:44:54.539794995Z ℹ️ [2025-11-29T08:44:54.539Z] [INFO] ✅ Event loaded: group_join 
+2025-11-29T08:44:54.540732463Z ℹ️ [2025-11-29T08:44:54.540Z] [INFO] ✅ Event loaded: message 
+2025-11-29T08:44:54.540739213Z ℹ️ [2025-11-29T08:44:54.540Z] [INFO] 📡 Total events: 2 
+2025-11-29T08:44:54.546414554Z ℹ️ [2025-11-29T08:44:54.546Z] [INFO] 📊 Dashboard API on port 3000 
+2025-11-29T08:45:06.07364919Z ❌ [2025-11-29T08:45:06.073Z] [ERROR] Bot launch error: 409: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-11-29T08:45:06.073680972Z ❌ [2025-11-29T08:45:06.073Z] [ERROR] Startup error: 409: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
