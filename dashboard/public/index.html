@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🌹 Rose Bot Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="container">
+      <h1 class="logo">🌹 Rose Bot Dashboard</h1>
+      <div class="nav-links">
+        <a href="#dashboard" class="active">Dashboard</a>
+        <a href="#commands">Commands</a>
+        <a href="#groups">Groups</a>
+        <a href="#usage">Usage</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <!-- Dashboard Section -->
+    <section id="dashboard" class="section active">
+      <h2>Bot Status</h2>
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-icon">👥</div>
+          <div class="stat-content">
+            <div class="stat-value" id="usersCount">0</div>
+            <div class="stat-label">Users</div>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">💬</div>
+          <div class="stat-content">
+            <div class="stat-value" id="groupsCount">0</div>
+            <div class="stat-label">Groups</div>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">⚡</div>
+          <div class="stat-content">
+            <div class="stat-value" id="commandsCount">0</div>
+            <div class="stat-label">Commands</div>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">⏱️</div>
+          <div class="stat-content">
+            <div class="stat-value" id="uptime">0</div>
+            <div class="stat-label">Uptime (hours)</div>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">💾</div>
+          <div class="stat-content">
+            <div class="stat-value" id="memory">0</div>
+            <div class="stat-label">Memory (MB)</div>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">⚠️</div>
+          <div class="stat-content">
+            <div class="stat-value" id="warningsCount">0</div>
+            <div class="stat-label">Total Warnings</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="info-box">
+        <h3>🤖 Bot Information</h3>
+        <p><strong>Name:</strong> Rose Bot</p>
+        <p><strong>Version:</strong> 2.0.0</p>
+        <p><strong>Framework:</strong> Telegraf (Node.js)</p>
+        <p><strong>Database:</strong> SQLite</p>
+        <p><strong>Status:</strong> <span class="status-online">● Online</span></p>
+      </div>
+    </section>
+
+    <!-- Commands Section -->
+    <section id="commands" class="section">
+      <h2>Commands (68 Total)</h2>
+      <div class="search-box">
+        <input type="text" id="searchCommands" placeholder="Search commands...">
+      </div>
+      <div id="commandsList" class="commands-list">
+        <p>Loading commands...</p>
+      </div>
+    </section>
+
+    <!-- Groups Section -->
+    <section id="groups" class="section">
+      <h2>Connected Groups</h2>
+      <div id="groupsList" class="table-container">
+        <p>Loading groups...</p>
+      </div>
+    </section>
+
+    <!-- Usage Section -->
+    <section id="usage" class="section">
+      <h2>Command Usage & Warnings</h2>
+      <div class="two-columns">
+        <div>
+          <h3>Top Commands</h3>
+          <div id="usageList">
+            <p>Loading...</p>
+          </div>
+        </div>
+        <div>
+          <h3>Users with Most Warnings</h3>
+          <div id="warningsList">
+            <p>Loading...</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <footer class="footer">
+    <p>🌹 Rose Bot v2.0.0 | Developed by Gtajisan | <a href="mailto:ffjisan804@gmail.com">ffjisan804@gmail.com</a></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
