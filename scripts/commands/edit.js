@@ -49,23 +49,24 @@ module.exports = {
         headers: {
           'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
         },
-        validateStatus: () => true // Accept all status codes
+        validateStatus: () => true
       });
 
       logger.info('EDIT', 'API Response received', { status: response.status });
+      
+      const fullResponse = response.data;
+      logger.debug('EDIT', 'API response data', { response: JSON.stringify(fullResponse).substring(0, 200) });
+
+      // Check if API returned a success flag
+      if (fullResponse?.success === false) {
+        logger.error('EDIT', new Error(fullResponse?.error || 'API returned success=false'), {});
+        await goat.reply(ctx, `❌ Image processing failed: ${fullResponse?.error || 'Unknown error'}. Try with a clearer prompt or image.`, { parse_mode: 'Markdown' });
+        return;
+      }
 
       // Extract image URL from various possible response formats
       let imageUrl = null;
-      const fullResponse = response.data;
 
-      // Log raw response for debugging
-      logger.debug('EDIT', 'Full API response', { 
-        type: typeof fullResponse,
-        length: fullResponse?.length || 'N/A',
-        keys: typeof fullResponse === 'object' ? Object.keys(fullResponse) : 'N/A'
-      });
-
-      // Try different extraction methods
       if (response.status === 200) {
         // Method 1: Check for imageUrl property
         if (typeof fullResponse === 'object' && fullResponse?.imageUrl) {
@@ -78,13 +79,12 @@ module.exports = {
             imageUrl = fullResponse;
             logger.debug('EDIT', 'Response is direct URL');
           } else {
-            // Try to parse as JSON
             try {
               const parsed = JSON.parse(fullResponse);
               imageUrl = parsed.imageUrl || parsed.image || parsed.url || parsed.data;
               logger.debug('EDIT', 'Parsed JSON string response');
             } catch (e) {
-              logger.error('EDIT', e, { response: fullResponse });
+              logger.error('EDIT', e, {});
             }
           }
         }
@@ -95,20 +95,27 @@ module.exports = {
             logger.debug('EDIT', 'Found URL in alternative property');
           }
         }
-        // Method 4: Check if response has nested image data
-        if (!imageUrl && typeof fullResponse === 'object') {
+        // Method 4: Regex extraction from entire response
+        if (!imageUrl) {
           const jsonStr = JSON.stringify(fullResponse);
-          const urlMatch = jsonStr.match(/https?:\/\/[^\s"]+/);
+          const urlMatch = jsonStr.match(/https?:\/\/[^\s"<>]+/);
           if (urlMatch) {
             imageUrl = urlMatch[0];
-            logger.debug('EDIT', 'Extracted URL from JSON string');
+            logger.debug('EDIT', 'Extracted URL from response string');
           }
         }
       }
 
       if (!imageUrl) {
-        logger.error('EDIT', new Error('No image URL found in response'), { response: JSON.stringify(fullResponse).substring(0, 500) });
-        await goat.reply(ctx, '❌ Could not extract image from API response. Try again with a different prompt.', { parse_mode: 'Markdown' });
+        logger.error('EDIT', new Error('No image URL found in response'), { response: JSON.stringify(fullResponse).substring(0, 300) });
+        await goat.reply(ctx, '❌ API did not return an image. Try a different prompt or image.', { parse_mode: 'Markdown' });
+        return;
+      }
+
+      // Validate URL format
+      if (!imageUrl.startsWith('http')) {
+        logger.error('EDIT', new Error('Invalid image URL format'), { imageUrl });
+        await goat.reply(ctx, '❌ Received invalid image URL from API.', { parse_mode: 'Markdown' });
         return;
       }
 
