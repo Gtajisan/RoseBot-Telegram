@@ -2,7 +2,7 @@ module.exports = {
   name: 'edit',
   description: 'Edit bot message',
   author: 'Gtajisan',
-  adminOnly: true,
+  adminOnly: false,
 
   async execute(ctx, args, db, config, goat) {
     if (!args[0]) {
