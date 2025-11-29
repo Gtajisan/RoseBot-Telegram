@@ -1,0 +1,157 @@
+Got it! You want a **complete master prompt** that will not only build the Telegram GoatBot-V2 bot with all Rose + Baka-Chan commands but also **test for errors, fix them automatically, and make it fully deployable** (console/Replit ready).
+
+Here’s a polished prompt for that:
+
+---
+
+# ✅ **MASTER PROMPT — Telegram GoatBot-V2 with Auto Test & Error Fix for Deployment**
+
+**Prompt Start:**
+
+> Build a fully working **Telegram bot** using Node.js and **Telegraf**, based on **GoatBot-V2 structure**, integrating all commands from **Rose Bot** and **Baka-Chan-v1**.
+> The bot must be **console/Replit-ready** and include **automatic testing and error handling** to ensure smooth deployment.
+>
+> ## **1. Repo Structure**
+>
+> Keep exactly like GoatBot-V2:
+>
+> ```
+> /
+> ├── bot/
+> │   ├── api/            <-- Telegram wrapper
+> │   ├── events/
+> │   └── handlers/
+> ├── dashboard/
+> ├── database/
+> ├── func/
+> ├── languages/
+> ├── logger/
+> ├── scripts/
+> │   ├── cmds/           <-- GoatBot + Rose + Baka-Chan commands
+> │   ├── events/
+> │   └── system/
+> ├── .eslintrc.json
+> ├── .gitignore
+> ├── README.md
+> ├── config.json
+> ├── configCommands.json
+> ├── Goat.js
+> ├── index.js
+> ├── package.json
+> └── utils.js
+> ```
+>
+> ## **2. Telegram API Wrapper**
+>
+> Replace `fb-chat-api` with `bot/api/telegram/` containing:
+>
+> * `client.js` → exports Telegraf bot instance
+> * `sendMessage.js`, `editMessage.js`, `deleteMessage.js`
+> * `user.js` → get user info
+> * `group.js` → chat info, admins, kick, ban, mute
+> * All commands should use this API wrapper
+>
+> ## **3. Command Loader**
+>
+> * Auto-load commands from `/scripts/cmds/*`
+> * Module format:
+>
+> ```js
+> module.exports = {
+>   config: { name, aliases, author, description, role, countDown },
+>   onStart: async ({ ctx, args, api }) => { /* code */ }
+> }
+> ```
+>
+> * Supports cooldowns, roles, prefixes, multi-language, database
+> * Automatically logs errors and returns user-friendly messages
+>
+> ## **4. Rose Bot Commands**
+>
+> * Include all moderation, admin, welcome/goodbye, locks, filters, notes, warn, utilities
+> * Convert all to **Telegram API** format
+>
+> ## **5. Baka-Chan-v1 Commands**
+>
+> * Include all commands from `scripts/cmds/`
+> * AI/Image commands (`edit.js`, `waifu.js`, `logo.js`, `meme.js`)
+> * Fun commands, Anime, Group tools
+> * Convert all attachments/messages to **Telegram API equivalents**
+> * AI/Image commands must:
+>
+>   * Support reply to image
+>   * Pick largest photo
+>   * Send "⏳" loading message
+>   * Send final edited image with `ctx.replyWithPhoto()`
+>   * Handle errors gracefully
+>
+> ## **6. Dashboard**
+>
+> * Express-based dashboard with Telegram OAuth
+> * Show bot stats
+> * Manage group settings
+> * REST APIs for commands
+>
+> ## **7. index.js**
+>
+> * Start Telegram client
+> * Load commands & events
+> * Initialize database
+> * Start dashboard server
+> * Global error handling
+>
+> ## **8. Features**
+>
+> * Command cooldowns
+> * Multi-language support
+> * Admin/owner checks
+> * Event listeners (join, leave, message delete/edit)
+> * Auto-reload commands
+> * AI/Image commands fully functional
+> * Modular architecture
+>
+> ## **9. Testing & Error Fix**
+>
+> * Automatically scan all command files for syntax errors
+> * Validate proper usage of Telegram API (`ctx`, `ctx.reply`, `ctx.replyWithPhoto`, etc.)
+> * Catch unhandled promise rejections
+> * Auto-fix common issues (missing `await`, wrong parameters, missing `try/catch`)
+> * Provide console log messages for each fixed error
+> * Ensure all commands run without crashing in Replit or local console
+>
+> ## **10. Replit / Console Ready**
+>
+> * Include `package.json` with dependencies (`telegraf`, `axios`, `express`, `lowdb` or `mongodb`, `node-fetch`)
+> * Install dependencies with `npm install`
+> * Run bot with `node index.js`
+> * All logs printed to console
+> * Errors caught and logged safely
+>
+> ## **11. Deliverables**
+>
+> * `/scripts/cmds/` → all GoatBot + Rose + Baka-Chan commands (Telegram API adapted, error-checked)
+> * `/bot/api/telegram/` → wrapper modules
+> * `/bot/handlers/` → command & event handlers
+> * `Goat.js` → adapted for Telegram
+> * `index.js` → main bot entry
+> * `utils.js` → helper functions
+> * Fully working **production-ready bot**
+>
+> The bot must **run immediately**, and **automatically detect & fix errors** during startup or command execution.
+
+---
+
+This prompt is **Replit/console-ready** and instructs an AI/code generator to:
+
+1. Build the full Telegram bot project
+2. Convert all commands from Facebook/Messenger to Telegram
+3. Include AI/image commands
+4. Test for errors
+5. Auto-fix common issues
+6. Make the bot deployable immediately
+
+---
+
+If you want, I can now **generate the full Telegram-ready GoatBot-V2 repo** with **auto error fix + testing system**, ready to deploy on Replit or your console.
+
+Do you want me to do that next?
