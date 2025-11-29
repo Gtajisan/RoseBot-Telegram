@@ -1,0 +1,50 @@
+2025-11-29T07:18:21.564460648Z npm error       |                                                    ~~~~~~~~~^~~~~
+2025-11-29T07:18:21.564462478Z npm error ./src/util/binder.lzz:132:78: error: no matching function for call to ‘v8::String::Utf8Value::Utf8Value(v8::Isolate*&, v8::Local<v8::String>&)’
+2025-11-29T07:18:21.564464198Z npm error /opt/render/.cache/25.2.1/include/node/v8-primitive.h:649:5: note: candidate: ‘v8::String::Utf8Value::Utf8Value(v8::Isolate*, v8::Local<v8::Value>)’
+2025-11-29T07:18:21.564465888Z npm error   649 |     Utf8Value(Isolate* isolate, Local<v8::Value> obj);
+2025-11-29T07:18:21.564467598Z npm error       |     ^~~~~~~~~
+2025-11-29T07:18:21.564469358Z npm error /opt/render/.cache/25.2.1/include/node/v8-primitive.h:649:50: note:   no known conversion for argument 2 from ‘Local<v8::String>’ to ‘Local<v8::Value>’
+2025-11-29T07:18:21.564471048Z npm error   649 |     Utf8Value(Isolate* isolate, Local<v8::Value> obj);
+2025-11-29T07:18:21.564472818Z npm error       |                                 ~~~~~~~~~~~~~~~~~^~~
+2025-11-29T07:18:21.564474758Z npm error ./src/util/binder.lzz:138:72: error: no matching function for call to ‘v8::Object::Get(v8::Local<v8::Context>&, v8::Local<v8::String>&)’
+2025-11-29T07:18:21.564479119Z npm error /opt/render/.cache/25.2.1/include/node/v8-object.h:307:43: note: candidate: ‘v8::MaybeLocal<v8::Value> v8::Object::Get(v8::Local<v8::Context>, v8::Local<v8::Value>)’
+2025-11-29T07:18:21.564480959Z npm error   307 |   V8_WARN_UNUSED_RESULT MaybeLocal<Value> Get(Local<Context> context,
+2025-11-29T07:18:21.564482689Z npm error       |                                           ^~~
+2025-11-29T07:18:21.564484599Z npm error /opt/render/.cache/25.2.1/include/node/v8-object.h:308:60: note:   no known conversion for argument 2 from ‘Local<v8::String>’ to ‘Local<v8::Value>’
+2025-11-29T07:18:21.564486359Z npm error   308 |                                               Local<Value> key);
+2025-11-29T07:18:21.564488069Z npm error       |                                               ~~~~~~~~~~~~~^~~
+2025-11-29T07:18:21.564491079Z npm error /opt/render/.cache/25.2.1/include/node/v8-object.h:309:43: note: candidate: ‘v8::MaybeLocal<v8::Value> v8::Object::Get(v8::Local<v8::Context>, v8::Local<v8::Value>, v8::MaybeLocal<v8::Object>)’
+2025-11-29T07:18:21.564492939Z npm error   309 |   V8_WARN_UNUSED_RESULT MaybeLocal<Value> Get(Local<Context> context,
+2025-11-29T07:18:21.56449474Z npm error       |                                           ^~~
+2025-11-29T07:18:21.56449656Z npm error /opt/render/.cache/25.2.1/include/node/v8-object.h:309:43: note:   candidate expects 3 arguments, 2 provided
+2025-11-29T07:18:21.56449826Z npm error /opt/render/.cache/25.2.1/include/node/v8-object.h:313:43: note: candidate: ‘v8::MaybeLocal<v8::Value> v8::Object::Get(v8::Local<v8::Context>, uint32_t)’
+2025-11-29T07:18:21.56450001Z npm error   313 |   V8_WARN_UNUSED_RESULT MaybeLocal<Value> Get(Local<Context> context,
+2025-11-29T07:18:21.56450172Z npm error       |                                           ^~~
+2025-11-29T07:18:21.56450348Z npm error /opt/render/.cache/25.2.1/include/node/v8-object.h:314:56: note:   no known conversion for argument 2 from ‘v8::Local<v8::String>’ to ‘uint32_t’ {aka ‘unsigned int’}
+2025-11-29T07:18:21.56450525Z npm error   314 |                                               uint32_t index);
+2025-11-29T07:18:21.56450696Z npm error       |                                               ~~~~~~~~~^~~~~
+2025-11-29T07:18:21.56450872Z npm error ./src/better_sqlite3.lzz: In static member function ‘static void Addon::JS_setErrorConstructor(const v8::FunctionCallbackInfo<v8::Value>&)’:
+2025-11-29T07:18:21.564510571Z npm error ./src/better_sqlite3.lzz:37:104: error: ‘struct Addon’ has no member named ‘SqliteError’
+2025-11-29T07:18:21.564512331Z npm error In file included from /opt/render/.cache/25.2.1/include/node/v8-isolate.h:22,
+2025-11-29T07:18:21.564514081Z npm error                  from /opt/render/.cache/25.2.1/include/node/v8-snapshot.h:9,
+2025-11-29T07:18:21.564515831Z npm error                  from /opt/render/.cache/25.2.1/include/node/v8-context.h:15:
+2025-11-29T07:18:21.564517621Z npm error /opt/render/.cache/25.2.1/include/node/v8-function-callback.h: In instantiation of ‘v8::Local<v8::Value> v8::FunctionCallbackInfo<F>::operator[](int) const [with T = v8::Value]’:
+2025-11-29T07:18:21.564519301Z npm error ./src/objects/database.lzz:151:63:   required from here
+2025-11-29T07:18:21.564526542Z npm error /opt/render/.cache/25.2.1/include/node/v8-function-callback.h:623:47: error: could not convert ‘v8::Undefined(((const v8::FunctionCallbackInfo<v8::Value>*)this)->v8::FunctionCallbackInfo<v8::Value>::GetIsolate())’ from ‘Local<v8::Primitive>’ to ‘Local<v8::Value>’
+2025-11-29T07:18:21.564528352Z npm error   623 |   if (i < 0 || Length() <= i) return Undefined(GetIsolate());
+2025-11-29T07:18:21.564530032Z npm error       |                                      ~~~~~~~~~^~~~~~~~~~~~~~
+2025-11-29T07:18:21.564534472Z npm error       |                                               |
+2025-11-29T07:18:21.564536212Z npm error       |                                               Local<v8::Primitive>
+2025-11-29T07:18:21.564537982Z npm error make: *** [better_sqlite3.target.mk:122: Release/obj.target/better_sqlite3/src/better_sqlite3.o] Error 1
+2025-11-29T07:18:21.564539802Z npm error gyp ERR! build error 
+2025-11-29T07:18:21.564541663Z npm error gyp ERR! stack Error: `make` failed with exit code: 2
+2025-11-29T07:18:21.564543463Z npm error gyp ERR! stack at ChildProcess.<anonymous> (/opt/render/project/nodes/node-25.2.1/lib/node_modules/npm/node_modules/node-gyp/lib/build.js:219:23)
+2025-11-29T07:18:21.564545603Z npm error gyp ERR! System Linux 6.8.0-1043-aws
+2025-11-29T07:18:21.564547393Z npm error gyp ERR! command "/opt/render/project/nodes/node-25.2.1/bin/node" "/opt/render/project/nodes/node-25.2.1/lib/node_modules/npm/node_modules/node-gyp/bin/node-gyp.js" "rebuild" "--release"
+2025-11-29T07:18:21.564549173Z npm error gyp ERR! cwd /opt/render/project/src/node_modules/better-sqlite3
+2025-11-29T07:18:21.564550963Z npm error gyp ERR! node -v v25.2.1
+2025-11-29T07:18:21.564552663Z npm error gyp ERR! node-gyp -v v11.4.2
+2025-11-29T07:18:21.564554403Z npm error gyp ERR! not ok
+2025-11-29T07:18:21.56725627Z npm error A complete log of this run can be found in: /opt/render/.cache/_logs/2025-11-29T07_16_56_950Z-debug-0.log
+2025-11-29T07:18:21.687231123Z ==> Build failed 😞
+2025-11-29T07:18:21.687246384Z ==> Common ways to troubleshoot your deploy: https://render.com/docs/troubleshooting-deploys
