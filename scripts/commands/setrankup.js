@@ -1,47 +1,10 @@
-const axios = require('axios');
-
 module.exports = {
   name: 'setrankup',
-  description: 'No description',
-  author: 'NTKhang',
+  description: 'Command',
+  author: 'Gtajisan',
   adminOnly: false,
 
   async execute(ctx, args, db, config, goat) {
-    try {
-      // Converted from Goatbot command: setrankup.js
-      // Original author: NTKhang
-      
-      // Migration Note: This command was auto-converted from Goatbot format.
-      // Some features may need manual adjustment for Telegram.
-      
-      // Handle the command
-      const senderID = ctx.from.id;
-      const chatID = ctx.chat.id;
-      const messageID = ctx.message.message_id;
-      
-      // Get user mentions
-      const mentions = {};
-      if (ctx.message.reply_to_message) {
-        mentions[ctx.message.reply_to_message.from.id] = '@' + (ctx.message.reply_to_message.from.username || ctx.message.reply_to_message.from.first_name);
-      }
-      
-      // Get target user
-      let target = null;
-      if (args[0] && !isNaN(args[0])) {
-        target = args[0];
-      } else if (ctx.message.reply_to_message) {
-        target = ctx.message.reply_to_message.from.id;
-      } else if (Object.keys(mentions).length > 0) {
-        target = Object.keys(mentions)[0];
-      }
-      
-      // Basic command response
-      await goat.reply(ctx, `✅ Command '${ctx.message?.text?.split(' ')[0]?.slice(1) || 'command'}' executed
-💡 This is an auto-converted Goatbot command
-🔧 Developer may need to refine functionality`);
-      
-    } catch (error) {
-      await goat.reply(ctx, `❌ Error: ${error.message}`);
-    }
+    await goat.reply(ctx, `✅ /setrankup command\n\nThis command is available but may need additional setup.\n\nUse /help for more commands.`, { parse_mode: 'Markdown' });
   }
 };
