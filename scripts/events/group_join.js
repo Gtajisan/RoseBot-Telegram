@@ -4,7 +4,7 @@ module.exports = {
 
   async execute(ctx, goat, db, config) {
     if (ctx.chat) {
-      db.addChat(ctx.chat.id, {
+      await db.addChat(ctx.chat.id, {
         title: ctx.chat.title || 'Unknown',
         type: ctx.chat.type
       });

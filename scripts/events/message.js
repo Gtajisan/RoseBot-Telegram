@@ -5,7 +5,7 @@ module.exports = {
   async execute(ctx, goat, db, config) {
     const user = ctx.from;
     if (user) {
-      db.addUser(user.id, {
+      await db.addUser(user.id, {
         username: user.username || 'unknown',
         first_name: user.first_name || ''
       });

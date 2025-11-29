@@ -5,7 +5,7 @@ module.exports = {
   adminOnly: true,
 
   async execute(ctx, args, db, config, goat) {
-    const stats = db.getStats();
+    const stats = await db.getStats();
     const uptime = Math.floor(process.uptime());
     const memory = process.memoryUsage();
 
