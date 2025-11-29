@@ -1,0 +1,50 @@
+2025-11-29T09:47:33.630753861Z ℹ️ [2025-11-29T09:47:33.630Z] [INFO] ✅ Command loaded: /start 
+2025-11-29T09:47:33.631075356Z ℹ️ [2025-11-29T09:47:33.630Z] [INFO] ✅ Command loaded: /stats 
+2025-11-29T09:47:33.631405221Z ℹ️ [2025-11-29T09:47:33.631Z] [INFO] ✅ Command loaded: /stop 
+2025-11-29T09:47:33.631722286Z ℹ️ [2025-11-29T09:47:33.631Z] [INFO] ✅ Command loaded: /stopall 
+2025-11-29T09:47:33.63202673Z ℹ️ [2025-11-29T09:47:33.631Z] [INFO] ✅ Command loaded: /tempban 
+2025-11-29T09:47:33.632358235Z ℹ️ [2025-11-29T09:47:33.632Z] [INFO] ✅ Command loaded: /texttoimage 
+2025-11-29T09:47:33.632706881Z ℹ️ [2025-11-29T09:47:33.632Z] [INFO] ✅ Command loaded: /thread 
+2025-11-29T09:47:33.633064717Z ℹ️ [2025-11-29T09:47:33.632Z] [INFO] ✅ Command loaded: /tid 
+2025-11-29T09:47:33.633412713Z ℹ️ [2025-11-29T09:47:33.633Z] [INFO] ✅ Command loaded: /translate 
+2025-11-29T09:47:33.63377495Z ℹ️ [2025-11-29T09:47:33.633Z] [INFO] ✅ Command loaded: /uid 
+2025-11-29T09:47:33.634157387Z ℹ️ [2025-11-29T09:47:33.634Z] [INFO] ✅ Command loaded: /unban 
+2025-11-29T09:47:33.634480342Z ℹ️ [2025-11-29T09:47:33.634Z] [INFO] ✅ Command loaded: /unlock 
+2025-11-29T09:47:33.634772536Z ℹ️ [2025-11-29T09:47:33.634Z] [INFO] ✅ Command loaded: /unmute 
+2025-11-29T09:47:33.63509885Z ℹ️ [2025-11-29T09:47:33.635Z] [INFO] ✅ Command loaded: /unpin 
+2025-11-29T09:47:33.635494678Z ℹ️ [2025-11-29T09:47:33.635Z] [INFO] ✅ Command loaded: /unsend 
+2025-11-29T09:47:33.635805033Z ℹ️ [2025-11-29T09:47:33.635Z] [INFO] ✅ Command loaded: /uptime 
+2025-11-29T09:47:33.636123497Z ℹ️ [2025-11-29T09:47:33.636Z] [INFO] ✅ Command loaded: /update 
+2025-11-29T09:47:33.636451692Z ℹ️ [2025-11-29T09:47:33.636Z] [INFO] ✅ Command loaded: /uptime 
+2025-11-29T09:47:33.636797928Z ℹ️ [2025-11-29T09:47:33.636Z] [INFO] ✅ Command loaded: /user 
+2025-11-29T09:47:33.637145874Z ℹ️ [2025-11-29T09:47:33.637Z] [INFO] ✅ Command loaded: /userinfo 
+2025-11-29T09:47:33.638170371Z ℹ️ [2025-11-29T09:47:33.638Z] [INFO] ✅ Command loaded: /users 
+2025-11-29T09:47:33.63837873Z ℹ️ [2025-11-29T09:47:33.638Z] [INFO] ✅ Command loaded: /vip 
+2025-11-29T09:47:33.638737747Z ℹ️ [2025-11-29T09:47:33.638Z] [INFO] ✅ Command loaded: /waifu 
+2025-11-29T09:47:33.639080642Z ℹ️ [2025-11-29T09:47:33.638Z] [INFO] ✅ Command loaded: /warn 
+2025-11-29T09:47:33.639290542Z ℹ️ [2025-11-29T09:47:33.639Z] [INFO] ✅ Command loaded: /warnlimit 
+2025-11-29T09:47:33.639597556Z ℹ️ [2025-11-29T09:47:33.639Z] [INFO] ✅ Command loaded: /warnmode 
+2025-11-29T09:47:33.639864778Z ℹ️ [2025-11-29T09:47:33.639Z] [INFO] ✅ Command loaded: /warns 
+2025-11-29T09:47:33.640178313Z ℹ️ [2025-11-29T09:47:33.640Z] [INFO] ✅ Command loaded: /warntime 
+2025-11-29T09:47:33.640405123Z ℹ️ [2025-11-29T09:47:33.640Z] [INFO] ✅ Command loaded: /weather 
+2025-11-29T09:47:33.726473761Z ℹ️ [2025-11-29T09:47:33.726Z] [INFO] ✅ Command loaded: /welcome 
+2025-11-29T09:47:33.726769245Z ℹ️ [2025-11-29T09:47:33.726Z] [INFO] ✅ Command loaded: /whois 
+2025-11-29T09:47:33.727036187Z ℹ️ [2025-11-29T09:47:33.726Z] [INFO] ✅ Command loaded: /whitelist 
+2025-11-29T09:47:33.727295229Z ℹ️ [2025-11-29T09:47:33.727Z] [INFO] ✅ Command loaded: /ytb 
+2025-11-29T09:47:33.72731015Z ℹ️ [2025-11-29T09:47:33.727Z] [INFO] 📋 Total commands loaded: 146 
+2025-11-29T09:47:33.727827473Z ℹ️ [2025-11-29T09:47:33.727Z] [INFO] ✅ Event loaded: group_join 
+2025-11-29T09:47:33.728052593Z ℹ️ [2025-11-29T09:47:33.727Z] [INFO] ✅ Event loaded: message 
+2025-11-29T09:47:33.728056204Z ℹ️ [2025-11-29T09:47:33.728Z] [INFO] 📡 Total events: 2 
+2025-11-29T09:47:33.732550179Z ℹ️ [2025-11-29T09:47:33.732Z] [INFO] 📊 Dashboard API on port 3000 
+2025-11-29T09:47:39.638475696Z ==> Your service is live 🎉
+2025-11-29T09:47:39.824988449Z ==> 
+2025-11-29T09:47:40.007933452Z ==> ///////////////////////////////////////////////////////////
+2025-11-29T09:47:40.194207055Z ==> 
+2025-11-29T09:47:40.379173699Z ==> Available at your primary URL https://rosebot-telegram.onrender.com
+2025-11-29T09:47:40.565507952Z ==> 
+2025-11-29T09:47:40.750242015Z ==> ///////////////////////////////////////////////////////////
+2025-11-29T09:48:15.171563481Z 📸 [EDIT] Image URL obtained: https://api.telegram.org/file/bot8263644692:AAGta6...
+2025-11-29T09:48:15.516275633Z 🔗 [EDIT] Calling API: https://tawsif.is-a.dev/gemini/nano-banana?prompt=make%20night&url=https%3A%2F%2Fapi.telegram.org%2F...
+2025-11-29T09:48:23.27903072Z 📝 [EDIT] API Response Status: 200
+2025-11-29T09:48:23.279062021Z 📝 [EDIT] API Response Data: {"success":false,"error":"Error"}
+2025-11-29T09:48:23.279225789Z ❌ [EDIT] Unexpected response format: { success: false, error: 'Error' }
