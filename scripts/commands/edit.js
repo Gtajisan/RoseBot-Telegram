@@ -1,4 +1,5 @@
 const axios = require('axios');
+const logger = require('../../utils/logger');
 
 module.exports = {
   name: 'edit',
@@ -33,7 +34,7 @@ module.exports = {
       const photoId = repliedMsg.photo[repliedMsg.photo.length - 1].file_id;
       const fileLink = String(await goat.getInstance().telegram.getFileLink(photoId));
       
-      console.log('📸 [EDIT] Image URL obtained:', fileLink.substring(0, 50) + '...');
+      logger.info('EDIT', 'Image URL obtained');
       
       // Show processing status
       await goat.reply(ctx, '⏳ Processing image with Nano-Banana AI...', { parse_mode: 'Markdown' });
@@ -41,48 +42,77 @@ module.exports = {
       // Call Nano-Banana API
       const apiUrl = `https://tawsif.is-a.dev/gemini/nano-banana?prompt=${encodeURIComponent(prompt)}&url=${encodeURIComponent(fileLink)}`;
       
-      console.log('🔗 [EDIT] Calling API:', apiUrl.substring(0, 100) + '...');
+      logger.debug('EDIT', 'API call', { apiUrl: apiUrl.substring(0, 80) });
       
       const response = await axios.get(apiUrl, { 
         timeout: 120000,
         headers: {
           'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
-        }
+        },
+        validateStatus: () => true // Accept all status codes
       });
 
-      console.log('📝 [EDIT] API Response Status:', response.status);
-      console.log('📝 [EDIT] API Response Data:', JSON.stringify(response.data).substring(0, 300));
+      logger.info('EDIT', 'API Response received', { status: response.status });
 
-      // Handle response - API returns imageUrl directly
-      let imageUrl;
-      
+      // Extract image URL from various possible response formats
+      let imageUrl = null;
+      const fullResponse = response.data;
+
+      // Log raw response for debugging
+      logger.debug('EDIT', 'Full API response', { 
+        type: typeof fullResponse,
+        length: fullResponse?.length || 'N/A',
+        keys: typeof fullResponse === 'object' ? Object.keys(fullResponse) : 'N/A'
+      });
+
+      // Try different extraction methods
       if (response.status === 200) {
-        // Check different possible response formats
-        if (response.data?.imageUrl) {
-          imageUrl = response.data.imageUrl;
-        } else if (typeof response.data === 'string' && response.data.startsWith('http')) {
-          imageUrl = response.data;
-        } else if (response.data?.image) {
-          imageUrl = response.data.image;
-        } else if (response.data?.url) {
-          imageUrl = response.data.url;
-        } else {
-          console.error('❌ [EDIT] Unexpected response format:', response.data);
-          await goat.reply(ctx, '❌ API response format not recognized. Try again.', { parse_mode: 'Markdown' });
-          return;
+        // Method 1: Check for imageUrl property
+        if (typeof fullResponse === 'object' && fullResponse?.imageUrl) {
+          imageUrl = fullResponse.imageUrl;
+          logger.debug('EDIT', 'Found URL in imageUrl property');
         }
-      } else {
-        console.error('❌ [EDIT] Unexpected status:', response.status);
-        await goat.reply(ctx, `❌ API returned status ${response.status}`, { parse_mode: 'Markdown' });
-        return;
+        // Method 2: Check if entire response is a URL string
+        else if (typeof fullResponse === 'string') {
+          if (fullResponse.startsWith('http')) {
+            imageUrl = fullResponse;
+            logger.debug('EDIT', 'Response is direct URL');
+          } else {
+            // Try to parse as JSON
+            try {
+              const parsed = JSON.parse(fullResponse);
+              imageUrl = parsed.imageUrl || parsed.image || parsed.url || parsed.data;
+              logger.debug('EDIT', 'Parsed JSON string response');
+            } catch (e) {
+              logger.error('EDIT', e, { response: fullResponse });
+            }
+          }
+        }
+        // Method 3: Check other common property names
+        else if (typeof fullResponse === 'object') {
+          imageUrl = fullResponse.image || fullResponse.url || fullResponse.result || fullResponse.data?.imageUrl || fullResponse.data?.image || fullResponse.data?.url;
+          if (imageUrl) {
+            logger.debug('EDIT', 'Found URL in alternative property');
+          }
+        }
+        // Method 4: Check if response has nested image data
+        if (!imageUrl && typeof fullResponse === 'object') {
+          const jsonStr = JSON.stringify(fullResponse);
+          const urlMatch = jsonStr.match(/https?:\/\/[^\s"]+/);
+          if (urlMatch) {
+            imageUrl = urlMatch[0];
+            logger.debug('EDIT', 'Extracted URL from JSON string');
+          }
+        }
       }
 
       if (!imageUrl) {
-        await goat.reply(ctx, '❌ API did not return an image URL', { parse_mode: 'Markdown' });
+        logger.error('EDIT', new Error('No image URL found in response'), { response: JSON.stringify(fullResponse).substring(0, 500) });
+        await goat.reply(ctx, '❌ Could not extract image from API response. Try again with a different prompt.', { parse_mode: 'Markdown' });
         return;
       }
 
-      console.log('🖼️ [EDIT] Generated image URL:', imageUrl.substring(0, 100) + '...');
+      logger.info('EDIT', 'Downloading image', { urlLength: imageUrl.length });
 
       // Download and send processed image
       const imageBuffer = await axios.get(imageUrl, {
@@ -90,7 +120,7 @@ module.exports = {
         timeout: 60000
       });
 
-      console.log('✅ [EDIT] Image downloaded, size:', imageBuffer.data.length);
+      logger.info('EDIT', 'Image downloaded successfully', { size: imageBuffer.data.length });
 
       await goat.getInstance().telegram.sendPhoto(
         ctx.chat.id,
@@ -102,14 +132,7 @@ module.exports = {
       );
 
     } catch (error) {
-      console.error('❌ [EDIT] Error:', error.message);
-      
-      if (error.response) {
-        console.error('📊 [EDIT] HTTP Status:', error.response.status);
-        console.error('📄 [EDIT] Error Response:', JSON.stringify(error.response.data).substring(0, 300));
-      } else if (error.code) {
-        console.error('❌ [EDIT] Error Code:', error.code);
-      }
+      logger.error('EDIT', error, { message: error.message });
       
       let errorMsg = '❌ Image processing failed';
       
@@ -125,6 +148,8 @@ module.exports = {
         errorMsg = '⚠️ Rate limited - wait a moment and try again';
       } else if (error.response?.status === 500) {
         errorMsg = '⚠️ API server error - try again later';
+      } else if (error.message.includes('arraybuffer')) {
+        errorMsg = '❌ Failed to download processed image';
       }
       
       await goat.reply(ctx, errorMsg, { parse_mode: 'Markdown' });
